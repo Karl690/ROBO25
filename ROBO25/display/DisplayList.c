@@ -45,30 +45,37 @@ char TestString[] ="test String 12345";
 
 
 LcdVariableInfo LcdVarsTable[] = {
-	{ (uint32_t)1, "GLOBAL1", FUNC_TITLE, COLOR_RED, COLOR_MAGENTA, 0 },
+	{ (uint32_t)1, "ROBO25_X1", FUNC_TITLE, COLOR_RED, COLOR_MAGENTA, 0 },
 	{(uint32_t)&HeartBeat,					HB_STRING, FUNC_INT32, COLOR_WHITE, COLOR_MAGENTA, 0},
 //analog conversion data
 	//_primaryHeadPtr
-	{(uint32_t)&Head11_Temperature, "Head Temp", FUNC_INT16, COLOR_WHITE, COLOR_MAGENTA, 0},
-	{(uint32_t)&Head11_HTRDuty,		"Head Duty", FUNC_INT16, COLOR_WHITE, COLOR_MAGENTA, 0},
-	{(uint32_t)&Head11_FanDuty,		"Head Duty", FUNC_INT16, COLOR_WHITE, COLOR_MAGENTA, 0},
-	{(uint32_t)&Head11_Spare,		"Head Duty", FUNC_INT16, COLOR_WHITE, COLOR_MAGENTA, 0},
+//	{(uint32_t)&Head11_Temperature, "Head Temp", FUNC_INT16, COLOR_WHITE, COLOR_MAGENTA, 0},
+//	{(uint32_t)&Head11_HTRDuty,		"Head Duty", FUNC_INT16, COLOR_WHITE, COLOR_MAGENTA, 0},
+//	{(uint32_t)&Head11_FanDuty,		"Head Duty", FUNC_INT16, COLOR_WHITE, COLOR_MAGENTA, 0},
+//	{(uint32_t)&Head11_Spare,		"Head Duty", FUNC_INT16, COLOR_WHITE, COLOR_MAGENTA, 0},
 
 //	{(uint32_t)&RawADCDataBuffer[0], "CH01_PA3", FUNC_INT16, COLOR_WHITE, COLOR_MAGENTA, 0},
 //	{(uint32_t)&RawADCDataBuffer[1], "CH02_PA4", FUNC_INT16, COLOR_WHITE, COLOR_MAGENTA, 0},
 //	{(uint32_t)&RawADCDataBuffer[2], "CH03_PA5", FUNC_INT16, COLOR_WHITE, COLOR_MAGENTA, 0},
 //	{(uint32_t)&RawADCDataBuffer[3], "CH04_PA6", FUNC_INT16, COLOR_WHITE, COLOR_MAGENTA, 0},
-	{(uint32_t)&RawADCDataBuffer[4], "CH05_PB1", FUNC_INT16, COLOR_WHITE, COLOR_MAGENTA, 0},
+//	{(uint32_t)&RawADCDataBuffer[4], "CH05_PB1", FUNC_INT16, COLOR_WHITE, COLOR_MAGENTA, 0},
 	{(uint32_t)&laserTemperature,    "LASER_TMP", FUNC_FLOAT, COLOR_WHITE, COLOR_MAGENTA, 0},
 	{(uint32_t)&RawADCDataBuffer[5], "CH05_PC5", FUNC_INT16, COLOR_WHITE, COLOR_MAGENTA, 0},
 
 	{(uint32_t)&Motors[M_X].POSITION, "MtrX Pos", FUNC_INT32, COLOR_WHITE, COLOR_MAGENTA, 0},
-	{(uint32_t)&Motors[M_X].PULSES_TO_GO, "X Pls2Go", FUNC_INT32, COLOR_WHITE, COLOR_MAGENTA, 0},
+//	{(uint32_t)&Motors[M_X].PULSES_TO_GO, "X Pls2Go", FUNC_INT32, COLOR_WHITE, COLOR_MAGENTA, 0},
 	{(uint32_t)&Motors[M_Y].POSITION, "MtrY Pos", FUNC_INT32, COLOR_WHITE, COLOR_MAGENTA, 0},
-	{(uint32_t)&Motors[M_Y].PULSES_TO_GO, "Y Pls2Go", FUNC_INT32, COLOR_WHITE, COLOR_MAGENTA, 0},
+//	{(uint32_t)&Motors[M_Y].PULSES_TO_GO, "Y Pls2Go", FUNC_INT32, COLOR_WHITE, COLOR_MAGENTA, 0},
+	{(uint32_t)&Motors[M_Z].POSITION, "MtrZ Pos", FUNC_INT32, COLOR_WHITE, COLOR_MAGENTA, 0},
+		{(uint32_t)&Motors[M_A].POSITION, "MtrA Pos", FUNC_INT32, COLOR_WHITE, COLOR_MAGENTA, 0},
+		{(uint32_t)&Motors[M_B].POSITION, "MtrB Pos", FUNC_INT32, COLOR_WHITE, COLOR_MAGENTA, 0},
+		{(uint32_t)&Motors[M_C].POSITION, "MtrC Pos", FUNC_INT32, COLOR_WHITE, COLOR_MAGENTA, 0},
 	{(uint32_t)&Motors[M_X].HomeSense, "X Home  ", FUNC_BAR_STATUS, COLOR_WHITE, COLOR_LIME, 0},
-	{(uint32_t)&Motors[M_Y].HomeSense,		"Y Home  ", FUNC_BAR_STATUS, COLOR_WHITE, COLOR_LIME, 0},
-
+	{(uint32_t)&Motors[M_Y].HomeSense, "Y Home  ", FUNC_BAR_STATUS, COLOR_WHITE, COLOR_LIME, 0},
+	{(uint32_t)&Motors[M_Z].HomeSense, "Z Home  ", FUNC_BAR_STATUS, COLOR_WHITE, COLOR_LIME, 0},
+	{(uint32_t)&Motors[M_A].HomeSense, "A Home  ", FUNC_BAR_STATUS, COLOR_WHITE, COLOR_LIME, 0},
+	{(uint32_t)&Motors[M_B].HomeSense, "B Home  ", FUNC_BAR_STATUS, COLOR_WHITE, COLOR_LIME, 0},
+	{(uint32_t)&Motors[M_C].HomeSense, "C Home  ", FUNC_BAR_STATUS, COLOR_WHITE, COLOR_LIME, 0},
 //{(uint32_t)&MotorZ.POSITION,			"MtrZ Pos", FUNC_INT32,		COLOR_WHITE, COLOR_MAGENTA, 0},
 //	{(uint32_t)&MotorZ.PULSES_TO_GO,		"Z Pls2Go", FUNC_INT32, COLOR_WHITE, COLOR_MAGENTA, 0},
 //	{(uint32_t)&MotorA.POSITION,			"MtrA Pos", FUNC_INT32,		COLOR_WHITE, COLOR_MAGENTA, 0},

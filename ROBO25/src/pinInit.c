@@ -96,7 +96,7 @@ void pinInitAll(void)
 	pinInit(PnP_Enable);
 	pinInit(SPi2_Mosi);
 	//pinInit(SPi2_Sclk);
-	pinInit(DOOROPEN_SENSE_INPUT);
+	//pinInit(DOOROPEN_SENSE_INPUT);
 	//pinInit(RPMINPUT); initialized with counter input to timer3
 	
 	pinInit(PWM_CO2_laserPower);
