@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32630.194
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ROBO25", "ROBO25\ROBO25.vcxproj", "{904C92E1-5B0F-487D-828E-943BCF1EBB16}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		X10_Release|VisualGDB = X10_Release|VisualGDB
+		X10|VisualGDB = X10|VisualGDB
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{904C92E1-5B0F-487D-828E-943BCF1EBB16}.X10_Release|VisualGDB.ActiveCfg = X10_Release|VisualGDB
+		{904C92E1-5B0F-487D-828E-943BCF1EBB16}.X10_Release|VisualGDB.Build.0 = X10_Release|VisualGDB
+		{904C92E1-5B0F-487D-828E-943BCF1EBB16}.X10|VisualGDB.ActiveCfg = X10|VisualGDB
+		{904C92E1-5B0F-487D-828E-943BCF1EBB16}.X10|VisualGDB.Build.0 = X10|VisualGDB
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {80A6B3E0-94C7-4A40-87F9-DC75E294AF3D}
+	EndGlobalSection
+EndGlobal

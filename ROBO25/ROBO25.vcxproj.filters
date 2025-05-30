@@ -1,0 +1,926 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="VisualGDB settings">
+      <UniqueIdentifier>{5814147d-74b9-45da-bee3-dba088466ebc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="cmsis">
+      <UniqueIdentifier>{4b08f968-5879-432c-a355-3ad5878d9d75}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="cmsis_boot">
+      <UniqueIdentifier>{09ac4826-79a0-47db-9dd9-4012bbf260d3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="cmsis_lib">
+      <UniqueIdentifier>{f3c38dfa-b726-4146-9165-e95712bc9078}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="common">
+      <UniqueIdentifier>{c6b9a3ec-7a6a-4114-9f7a-982d17563c59}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="inc">
+      <UniqueIdentifier>{e0f39edc-4d15-4d0a-a18a-b5174899cedc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{195e569e-07cb-45e7-a556-ab9955cd72e1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="usb_lib">
+      <UniqueIdentifier>{3d062099-fe28-46f3-bef6-e8ed06df56b1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="usb_lib\inc">
+      <UniqueIdentifier>{17eeffca-d3bd-4efa-ac78-f122a0bf6ff2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="usb_lib\src">
+      <UniqueIdentifier>{c0258048-bcf1-49c4-aa73-169fca90e81c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="common\inc">
+      <UniqueIdentifier>{5294e882-a922-4c04-8723-e80e65015924}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="common\lcd">
+      <UniqueIdentifier>{886e46cf-5738-46ff-a7ed-cae7c844a9c3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="common\src">
+      <UniqueIdentifier>{ffd4406d-1c8f-4dce-9a2e-302167cf8e51}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="common\lcd\controllers">
+      <UniqueIdentifier>{b9cfe492-5795-4d21-8989-d83cf60c8953}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="common\lcd\fonts">
+      <UniqueIdentifier>{4ee72467-8468-41ef-a964-fdee4a1e8fa5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="cmsis_lib\inc">
+      <UniqueIdentifier>{5feaacac-cfe2-45b2-aa57-ffcdba6970d2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="cmsis_lib\src">
+      <UniqueIdentifier>{e8fdd5cb-49cc-4b30-879e-5036f685cd86}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="cmsis_boot\startup">
+      <UniqueIdentifier>{b1bf502d-59f7-438f-a6d2-d6f03fbf81c5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="display">
+      <UniqueIdentifier>{72f0e073-14ef-42b7-81b4-860c8fa6a426}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="library">
+      <UniqueIdentifier>{10cff362-ddd2-4960-9b77-8024c5e381c0}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ROBO25-Debug.vgdbsettings">
+      <Filter>VisualGDB settings</Filter>
+    </None>
+    <None Include="ROBO25-Release.vgdbsettings">
+      <Filter>VisualGDB settings</Filter>
+    </None>
+    <None Include="stm32.xml">
+      <Filter>VisualGDB settings</Filter>
+    </None>
+    <None Include="ROBO25-X10.vgdbsettings">
+      <Filter>VisualGDB settings</Filter>
+    </None>
+    <None Include="stm32.props" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="usb_lib\src\usbd_usr.c">
+      <Filter>usb_lib\src</Filter>
+    </ClCompile>
+    <ClCompile Include="usb_lib\src\usbd_req.c">
+      <Filter>usb_lib\src</Filter>
+    </ClCompile>
+    <ClCompile Include="usb_lib\src\usbd_ioreq.c">
+      <Filter>usb_lib\src</Filter>
+    </ClCompile>
+    <ClCompile Include="usb_lib\src\usbd_desc.c">
+      <Filter>usb_lib\src</Filter>
+    </ClCompile>
+    <ClCompile Include="usb_lib\src\usbd_core.c">
+      <Filter>usb_lib\src</Filter>
+    </ClCompile>
+    <ClCompile Include="usb_lib\src\usbd_cdc_vcp.c">
+      <Filter>usb_lib\src</Filter>
+    </ClCompile>
+    <ClCompile Include="usb_lib\src\usbd_cdc_core.c">
+      <Filter>usb_lib\src</Filter>
+    </ClCompile>
+    <ClCompile Include="usb_lib\src\usb_dcd_int.c">
+      <Filter>usb_lib\src</Filter>
+    </ClCompile>
+    <ClCompile Include="usb_lib\src\usb_dcd.c">
+      <Filter>usb_lib\src</Filter>
+    </ClCompile>
+    <ClCompile Include="usb_lib\src\usb_core.c">
+      <Filter>usb_lib\src</Filter>
+    </ClCompile>
+    <ClCompile Include="usb_lib\src\usb_bsp.c">
+      <Filter>usb_lib\src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Serial.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\pinInit.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\MotorDrivers.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\MCode.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\mailbox.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Hydra_can.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\headSetup.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\HardwareInit.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GCode.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\display.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\diags.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\cruftyCode.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\bootloader.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="common\src\util.c">
+      <Filter>common\src</Filter>
+    </ClCompile>
+    <ClCompile Include="common\src\pins.c">
+      <Filter>common\src</Filter>
+    </ClCompile>
+    <ClCompile Include="common\src\hyrel_can.c">
+      <Filter>common\src</Filter>
+    </ClCompile>
+    <ClCompile Include="common\src\gui.c">
+      <Filter>common\src</Filter>
+    </ClCompile>
+    <ClCompile Include="common\lcd\lcd.c">
+      <Filter>common\lcd</Filter>
+    </ClCompile>
+    <ClCompile Include="common\lcd\fonts\font8.c">
+      <Filter>common\lcd\fonts</Filter>
+    </ClCompile>
+    <ClCompile Include="common\lcd\fonts\font24.c">
+      <Filter>common\lcd\fonts</Filter>
+    </ClCompile>
+    <ClCompile Include="common\lcd\fonts\font22.c">
+      <Filter>common\lcd\fonts</Filter>
+    </ClCompile>
+    <ClCompile Include="common\lcd\fonts\font20_14.c">
+      <Filter>common\lcd\fonts</Filter>
+    </ClCompile>
+    <ClCompile Include="common\lcd\fonts\font20.c">
+      <Filter>common\lcd\fonts</Filter>
+    </ClCompile>
+    <ClCompile Include="common\lcd\fonts\font16.c">
+      <Filter>common\lcd\fonts</Filter>
+    </ClCompile>
+    <ClCompile Include="common\lcd\fonts\font12.c">
+      <Filter>common\lcd\fonts</Filter>
+    </ClCompile>
+    <ClCompile Include="common\lcd\controllers\st7735.c">
+      <Filter>common\lcd\controllers</Filter>
+    </ClCompile>
+    <ClCompile Include="common\lcd\controllers\ssd1306.c">
+      <Filter>common\lcd\controllers</Filter>
+    </ClCompile>
+    <ClCompile Include="common\lcd\controllers\ili9341.c">
+      <Filter>common\lcd\controllers</Filter>
+    </ClCompile>
+    <ClCompile Include="cmsis_lib\src\stm32f4xx_usart.c">
+      <Filter>cmsis_lib\src</Filter>
+    </ClCompile>
+    <ClCompile Include="cmsis_lib\src\stm32f4xx_tim.c">
+      <Filter>cmsis_lib\src</Filter>
+    </ClCompile>
+    <ClCompile Include="cmsis_lib\src\stm32f4xx_syscfg.c">
+      <Filter>cmsis_lib\src</Filter>
+    </ClCompile>
+    <ClCompile Include="cmsis_lib\src\stm32f4xx_spi.c">
+      <Filter>cmsis_lib\src</Filter>
+    </ClCompile>
+    <ClCompile Include="cmsis_lib\src\stm32f4xx_sdio.c">
+      <Filter>cmsis_lib\src</Filter>
+    </ClCompile>
+    <ClCompile Include="cmsis_lib\src\stm32f4xx_rtc.c">
+      <Filter>cmsis_lib\src</Filter>
+    </ClCompile>
+    <ClCompile Include="cmsis_lib\src\stm32f4xx_rcc.c">
+      <Filter>cmsis_lib\src</Filter>
+    </ClCompile>
+    <ClCompile Include="cmsis_lib\src\stm32f4xx_pwr.c">
+      <Filter>cmsis_lib\src</Filter>
+    </ClCompile>
+    <ClCompile Include="cmsis_lib\src\stm32f4xx_misc.c">
+      <Filter>cmsis_lib\src</Filter>
+    </ClCompile>
+    <ClCompile Include="cmsis_lib\src\stm32f4xx_iwdg.c">
+      <Filter>cmsis_lib\src</Filter>
+    </ClCompile>
+    <ClCompile Include="cmsis_lib\src\stm32f4xx_it.c">
+      <Filter>cmsis_lib\src</Filter>
+    </ClCompile>
+    <ClCompile Include="cmsis_lib\src\stm32f4xx_i2c.c">
+      <Filter>cmsis_lib\src</Filter>
+    </ClCompile>
+    <ClCompile Include="cmsis_lib\src\stm32f4xx_gpio.c">
+      <Filter>cmsis_lib\src</Filter>
+    </ClCompile>
+    <ClCompile Include="cmsis_lib\src\stm32f4xx_fsmc.c">
+      <Filter>cmsis_lib\src</Filter>
+    </ClCompile>
+    <ClCompile Include="cmsis_lib\src\stm32f4xx_flash.c">
+      <Filter>cmsis_lib\src</Filter>
+    </ClCompile>
+    <ClCompile Include="cmsis_lib\src\stm32f4xx_exti.c">
+      <Filter>cmsis_lib\src</Filter>
+    </ClCompile>
+    <ClCompile Include="cmsis_lib\src\stm32f4xx_dma.c">
+      <Filter>cmsis_lib\src</Filter>
+    </ClCompile>
+    <ClCompile Include="cmsis_lib\src\stm32f4xx_dac.c">
+      <Filter>cmsis_lib\src</Filter>
+    </ClCompile>
+    <ClCompile Include="cmsis_lib\src\stm32f4xx_can.c">
+      <Filter>cmsis_lib\src</Filter>
+    </ClCompile>
+    <ClCompile Include="cmsis_lib\src\stm32f4xx_adc.c">
+      <Filter>cmsis_lib\src</Filter>
+    </ClCompile>
+    <ClCompile Include="cmsis_boot\system_stm32f4xx.c">
+      <Filter>cmsis_boot</Filter>
+    </ClCompile>
+    <ClCompile Include="cmsis_boot\startup\startup_stm32f4xx.c">
+      <Filter>cmsis_boot\startup</Filter>
+    </ClCompile>
+    <ClCompile Include="src\pnp.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\adc.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\adc_table.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="display\colortables.c">
+      <Filter>display</Filter>
+    </ClCompile>
+    <ClCompile Include="display\display.c">
+      <Filter>display</Filter>
+    </ClCompile>
+    <ClCompile Include="display\DisplayList.c">
+      <Filter>display</Filter>
+    </ClCompile>
+    <ClCompile Include="display\gui.c">
+      <Filter>display</Filter>
+    </ClCompile>
+    <ClCompile Include="display\lcdspi_4xx.c">
+      <Filter>display</Filter>
+    </ClCompile>
+    <ClCompile Include="display\st7789.c">
+      <Filter>display</Filter>
+    </ClCompile>
+    <ClCompile Include="main.c" />
+    <ClCompile Include="sysmem.c">
+      <Filter>library</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="usb_lib\inc\usbd_usr.h">
+      <Filter>usb_lib\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="usb_lib\inc\usbd_req.h">
+      <Filter>usb_lib\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="usb_lib\inc\usbd_ioreq.h">
+      <Filter>usb_lib\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="usb_lib\inc\usbd_desc.h">
+      <Filter>usb_lib\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="usb_lib\inc\usbd_def.h">
+      <Filter>usb_lib\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="usb_lib\inc\usbd_core.h">
+      <Filter>usb_lib\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="usb_lib\inc\usbd_conf.h">
+      <Filter>usb_lib\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="usb_lib\inc\usbd_cdc_vcp.h">
+      <Filter>usb_lib\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="usb_lib\inc\usbd_cdc_core.h">
+      <Filter>usb_lib\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="usb_lib\inc\usb_regs.h">
+      <Filter>usb_lib\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="usb_lib\inc\usb_defines.h">
+      <Filter>usb_lib\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="usb_lib\inc\usb_dcd_int.h">
+      <Filter>usb_lib\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="usb_lib\inc\usb_dcd.h">
+      <Filter>usb_lib\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="usb_lib\inc\usb_core.h">
+      <Filter>usb_lib\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="usb_lib\inc\usb_conf.h">
+      <Filter>usb_lib\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="usb_lib\inc\usb_bsp.h">
+      <Filter>usb_lib\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\Serial.h">
+      <Filter>inc</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\pinout.h">
+      <Filter>inc</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\MotorDriver.h">
+      <Filter>inc</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\main.h">
+      <Filter>inc</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\mailbox.h">
+      <Filter>inc</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\includes.h">
+      <Filter>inc</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\Hydra_can.h">
+      <Filter>inc</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\headSetup.h">
+      <Filter>inc</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\HardwareInit.h">
+      <Filter>inc</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\gpio.h">
+      <Filter>inc</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\GCode.h">
+      <Filter>inc</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\display.h">
+      <Filter>inc</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\diags.h">
+      <Filter>inc</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\bootloader.h">
+      <Filter>inc</Filter>
+    </ClInclude>
+    <ClInclude Include="common\lcd\lcd.h">
+      <Filter>common\lcd</Filter>
+    </ClInclude>
+    <ClInclude Include="common\lcd\hyrel3d_logo_320x240.h">
+      <Filter>common\lcd</Filter>
+    </ClInclude>
+    <ClInclude Include="common\lcd\hyrel3d_logo_128x128.h">
+      <Filter>common\lcd</Filter>
+    </ClInclude>
+    <ClInclude Include="common\lcd\fonts\fonts.h">
+      <Filter>common\lcd\fonts</Filter>
+    </ClInclude>
+    <ClInclude Include="common\inc\util.h">
+      <Filter>common\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="common\inc\pins_stm32f4xx.h">
+      <Filter>common\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="common\inc\pins_stm32f10x.h">
+      <Filter>common\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="common\inc\pins.h">
+      <Filter>common\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="common\inc\hyrel_can.h">
+      <Filter>common\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="common\inc\hyrel.h">
+      <Filter>common\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="common\inc\gui.h">
+      <Filter>common\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="cmsis_lib\inc\stm32f4xx_usart.h">
+      <Filter>cmsis_lib\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="cmsis_lib\inc\stm32f4xx_tim.h">
+      <Filter>cmsis_lib\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="cmsis_lib\inc\stm32f4xx_syscfg.h">
+      <Filter>cmsis_lib\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="cmsis_lib\inc\stm32f4xx_spi.h">
+      <Filter>cmsis_lib\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="cmsis_lib\inc\stm32f4xx_sdio.h">
+      <Filter>cmsis_lib\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="cmsis_lib\inc\stm32f4xx_rtc.h">
+      <Filter>cmsis_lib\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="cmsis_lib\inc\stm32f4xx_rcc.h">
+      <Filter>cmsis_lib\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="cmsis_lib\inc\stm32f4xx_pwr.h">
+      <Filter>cmsis_lib\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="cmsis_lib\inc\stm32f4xx_misc.h">
+      <Filter>cmsis_lib\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="cmsis_lib\inc\stm32f4xx_iwdg.h">
+      <Filter>cmsis_lib\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="cmsis_lib\inc\stm32f4xx_it.h">
+      <Filter>cmsis_lib\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="cmsis_lib\inc\stm32f4xx_i2c.h">
+      <Filter>cmsis_lib\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="cmsis_lib\inc\stm32f4xx_gpio.h">
+      <Filter>cmsis_lib\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="cmsis_lib\inc\stm32f4xx_fsmc.h">
+      <Filter>cmsis_lib\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="cmsis_lib\inc\stm32f4xx_flash.h">
+      <Filter>cmsis_lib\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="cmsis_lib\inc\stm32f4xx_exti.h">
+      <Filter>cmsis_lib\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="cmsis_lib\inc\stm32f4xx_dma.h">
+      <Filter>cmsis_lib\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="cmsis_lib\inc\stm32f4xx_dac.h">
+      <Filter>cmsis_lib\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="cmsis_lib\inc\stm32f4xx_can.h">
+      <Filter>cmsis_lib\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="cmsis_lib\inc\stm32f4xx_adc.h">
+      <Filter>cmsis_lib\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="cmsis_boot\system_stm32f4xx.h">
+      <Filter>cmsis_boot</Filter>
+    </ClInclude>
+    <ClInclude Include="cmsis_boot\stm32f4xx_conf.h">
+      <Filter>cmsis_boot</Filter>
+    </ClInclude>
+    <ClInclude Include="cmsis_boot\stm32f4xx.h">
+      <Filter>cmsis_boot</Filter>
+    </ClInclude>
+    <ClInclude Include="cmsis\core_cmInstr.h">
+      <Filter>cmsis</Filter>
+    </ClInclude>
+    <ClInclude Include="cmsis\core_cmFunc.h">
+      <Filter>cmsis</Filter>
+    </ClInclude>
+    <ClInclude Include="cmsis\core_cm4_simd.h">
+      <Filter>cmsis</Filter>
+    </ClInclude>
+    <ClInclude Include="cmsis\core_cm4.h">
+      <Filter>cmsis</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\pnp.h">
+      <Filter>inc</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\adc.h">
+      <Filter>inc</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\adc_table.h">
+      <Filter>inc</Filter>
+    </ClInclude>
+    <ClInclude Include="display\colortables.h">
+      <Filter>display</Filter>
+    </ClInclude>
+    <ClInclude Include="display\display.h">
+      <Filter>display</Filter>
+    </ClInclude>
+    <ClInclude Include="display\DisplayList.h">
+      <Filter>display</Filter>
+    </ClInclude>
+    <ClInclude Include="display\font.h">
+      <Filter>display</Filter>
+    </ClInclude>
+    <ClInclude Include="display\gui.h">
+      <Filter>display</Filter>
+    </ClInclude>
+    <ClInclude Include="display\LcdDefinitions.h">
+      <Filter>display</Filter>
+    </ClInclude>
+    <ClInclude Include="display\lcdspi_4xx.h">
+      <Filter>display</Filter>
+    </ClInclude>
+    <ClInclude Include="display\st7789.h">
+      <Filter>display</Filter>
+    </ClInclude>
+    <ClInclude Include="RevisionHistory.h">
+      <Filter>
+      </Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\CMSIS_HAL\Include\cmsis_armcc.h">
+      <Filter>cmsis</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\CMSIS_HAL\Include\cmsis_armclang.h">
+      <Filter>cmsis</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\CMSIS_HAL\Include\cmsis_compiler.h">
+      <Filter>cmsis</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\CMSIS_HAL\Include\cmsis_gcc.h">
+      <Filter>cmsis</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\CMSIS_HAL\Include\cmsis_iccarm.h">
+      <Filter>cmsis</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\CMSIS_HAL\RTOS\Template\cmsis_os.h">
+      <Filter>cmsis</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\CMSIS_HAL\Include\cmsis_version.h">
+      <Filter>cmsis</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\CMSIS_HAL\Include\core_armv8mbl.h">
+      <Filter>cmsis</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\CMSIS_HAL\Include\core_armv8mml.h">
+      <Filter>cmsis</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\CMSIS_HAL\Include\core_cm0.h">
+      <Filter>cmsis</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\CMSIS_HAL\Include\core_cm0plus.h">
+      <Filter>cmsis</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\CMSIS_HAL\Include\core_cm1.h">
+      <Filter>cmsis</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\CMSIS_HAL\Include\core_cm3.h">
+      <Filter>cmsis</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\CMSIS_HAL\Include\core_cm4.h">
+      <Filter>cmsis</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\CMSIS_HAL\Include\core_cm7.h">
+      <Filter>cmsis</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\CMSIS_HAL\Include\core_cm23.h">
+      <Filter>cmsis</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\CMSIS_HAL\Include\core_cm33.h">
+      <Filter>cmsis</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\CMSIS_HAL\Include\core_sc000.h">
+      <Filter>cmsis</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\CMSIS_HAL\Include\core_sc300.h">
+      <Filter>cmsis</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\CMSIS_HAL\Include\mpu_armv8.h">
+      <Filter>cmsis</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\CMSIS_HAL\Include\mpu_armv7.h">
+      <Filter>cmsis</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\Legacy\stm32_hal_legacy.h">
+      <Filter>library</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\CMSIS_HAL\Device\ST\STM32F4xx\Include\stm32f4xx.h">
+      <Filter>library</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal.h">
+      <Filter>library</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_adc.h">
+      <Filter>library</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_adc_ex.h">
+      <Filter>library</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_can.h">
+      <Filter>library</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\Legacy\stm32f4xx_hal_can_legacy.h">
+      <Filter>library</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_cec.h">
+      <Filter>library</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_cortex.h">
+      <Filter>library</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_crc.h">
+      <Filter>library</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_cryp.h">
+      <Filter>library</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_cryp_ex.h">
+      <Filter>library</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_dac.h">
+      <Filter>library</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_dac_ex.h">
+      <Filter>library</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_dcmi.h">
+      <Filter>library</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_dcmi_ex.h">
+      <Filter>library</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_def.h">
+      <Filter>library</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_dfsdm.h">
+      <Filter>library</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_dma.h">
+      <Filter>library</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_dma_ex.h">
+      <Filter>library</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_dma2d.h">
+      <Filter>library</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_dsi.h">
+      <Filter>library</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_eth.h">
+      <Filter>library</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\Legacy\stm32f4xx_hal_eth_legacy.h">
+      <Filter>library</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_exti.h">
+      <Filter>library</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_flash.h">
+      <Filter>library</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_flash_ex.h">
+      <Filter>library</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_flash_ramfunc.h">
+      <Filter>library</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_fmpi2c.h">
+      <Filter>library</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_fmpi2c_ex.h">
+      <Filter>library</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_fmpsmbus.h">
+      <Filter>library</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_fmpsmbus_ex.h">
+      <Filter>library</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_gpio.h">
+      <Filter>library</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_gpio_ex.h">
+      <Filter>library</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_hash.h">
+      <Filter>library</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_hash_ex.h">
+      <Filter>library</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_hcd.h">
+      <Filter>library</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_i2c.h">
+      <Filter>library</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_i2c_ex.h">
+      <Filter>library</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_i2s.h">
+      <Filter>library</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_i2s_ex.h">
+      <Filter>library</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_irda.h">
+      <Filter>library</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_iwdg.h">
+      <Filter>library</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_lptim.h">
+      <Filter>library</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_ltdc.h">
+      <Filter>library</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_ltdc_ex.h">
+      <Filter>library</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_mmc.h">
+      <Filter>library</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_nand.h">
+      <Filter>library</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_nor.h">
+      <Filter>library</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_pccard.h">
+      <Filter>library</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_pcd.h">
+      <Filter>library</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_pcd_ex.h">
+      <Filter>library</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_pwr.h">
+      <Filter>library</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_pwr_ex.h">
+      <Filter>library</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_qspi.h">
+      <Filter>library</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_rcc.h">
+      <Filter>library</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_rcc_ex.h">
+      <Filter>library</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_rng.h">
+      <Filter>library</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_rtc.h">
+      <Filter>library</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_rtc_ex.h">
+      <Filter>library</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_sai.h">
+      <Filter>library</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_sai_ex.h">
+      <Filter>library</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_sd.h">
+      <Filter>library</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_sdram.h">
+      <Filter>library</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_smartcard.h">
+      <Filter>library</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_smbus.h">
+      <Filter>library</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_spdifrx.h">
+      <Filter>library</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_spi.h">
+      <Filter>library</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_sram.h">
+      <Filter>library</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_tim.h">
+      <Filter>library</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_tim_ex.h">
+      <Filter>library</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_uart.h">
+      <Filter>library</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_usart.h">
+      <Filter>library</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_wwdg.h">
+      <Filter>library</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_ll_adc.h">
+      <Filter>library</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_ll_bus.h">
+      <Filter>library</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_ll_cortex.h">
+      <Filter>library</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_ll_crc.h">
+      <Filter>library</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_ll_dac.h">
+      <Filter>library</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_ll_dma.h">
+      <Filter>library</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_ll_dma2d.h">
+      <Filter>library</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_ll_exti.h">
+      <Filter>library</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_ll_fmc.h">
+      <Filter>library</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_ll_fmpi2c.h">
+      <Filter>library</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_ll_fsmc.h">
+      <Filter>library</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_ll_gpio.h">
+      <Filter>library</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_ll_i2c.h">
+      <Filter>library</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_ll_iwdg.h">
+      <Filter>library</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_ll_lptim.h">
+      <Filter>library</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_ll_pwr.h">
+      <Filter>library</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_ll_rcc.h">
+      <Filter>library</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_ll_rng.h">
+      <Filter>library</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_ll_rtc.h">
+      <Filter>library</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_ll_sdmmc.h">
+      <Filter>library</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_ll_spi.h">
+      <Filter>library</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_ll_system.h">
+      <Filter>library</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_ll_tim.h">
+      <Filter>library</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_ll_usart.h">
+      <Filter>library</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_ll_usb.h">
+      <Filter>library</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_ll_utils.h">
+      <Filter>library</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_ll_wwdg.h">
+      <Filter>library</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\CMSIS_HAL\Device\ST\STM32F4xx\Include\system_stm32f4xx.h">
+      <Filter>library</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\CMSIS_HAL\Include\tz_context.h">
+      <Filter>library</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32_USB_Device_Library\Class\CDC\Inc\usbd_cdc.h">
+      <Filter>library</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32_USB_Device_Library\Core\Inc\usbd_core.h">
+      <Filter>library</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32_USB_Device_Library\Core\Inc\usbd_ctlreq.h">
+      <Filter>library</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32_USB_Device_Library\Core\Inc\usbd_def.h">
+      <Filter>library</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32_USB_Device_Library\Core\Inc\usbd_ioreq.h">
+      <Filter>library</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

@@ -1,2 +1,2 @@
-# ROBO25
-motion controller using gcode for multi axis robot, runs on stm32F407
+# Hydra23X10
+port of old hydra that does not crash on long prints to the new X10 pcb
