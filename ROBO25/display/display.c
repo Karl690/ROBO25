@@ -285,7 +285,7 @@ void Format_MotorStatus(uint8_t row, void* info, uint16_t* colorTable)
 	uint8_t gross = pinRead(motorStatus->GrossMomePin);	
 	uint8_t fine = pinRead(motorStatus->FineHome);
 	
-	sprintf(strTempVal, "%08d   %02X  %02X", (int)motorStatus->MotorPosition, gross, fine);
+	sprintf(strTempVal, "%08d   %s  %s", (int)motorStatus->MotorPosition, gross?"##":"__", fine?"##":"__");
 	DrawString(VALUE_POS, PADDING, strTempVal, colorTable[varInfo->Color_2]);
 }
 /////////////////////////////////////////////////////////////////////////////////
