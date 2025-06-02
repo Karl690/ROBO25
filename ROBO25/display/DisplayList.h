@@ -23,18 +23,25 @@ typedef enum {
 	FUNC_MEMDUMPHEX,
 	FUNC_MEMDISPASCII,
 	FUNC_MEMDISPASCIIHEX,
-	FUNC_ASCI_SOAP
+	FUNC_ASCI_SOAP,
+	FUNC_MOTOR_STATUS
 }DISPLAYFUNCTYPE;
 
 typedef struct {
 	uint32_t 		VariablePointer;//points to the variable that holds the data we want to display
 	char 			Label[9];
 	DISPLAYFUNCTYPE FuncType;//function type how we show the data, i.e. hex, int, float
-	uint8_t		Color_1; // this is for Label or background in Bar.
+	uint8_t			Color_1; // this is for Label or background in Bar.
 	uint8_t			Color_2; // this is for Value or progress bar in Bar.
 	uint32_t 		Offset; //for FUNC_MEMDUMPASCII if string is array variable(char a[]), it would be 1 otherwise 0. it is only for memory ascii function
 							//for FUNC_MEMDUMPHEX it means offset.
 } LcdVariableInfo;
+
+typedef struct {
+	uint32_t MotorPosition; //points to the motor actual position  (uint32_t)&Motors[M_X].POSITION
+	pinType GrossMomePin; //used to find the gross positions
+	pinType FineHome; //pin connected to the fine home position	
+}MotorStatusStruct;
 
 extern uint32_t Head11_Temperature;
 extern uint32_t Head11_HTRDuty;

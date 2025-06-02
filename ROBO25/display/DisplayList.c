@@ -42,7 +42,9 @@ char TestString[] ="test String 12345";
 //	{(uint32_t)&RawADCDataBuffer[4],		"CH05_PB1", FUNC_INT16, 	COLOR_WHITE,	COLOR_RED, 		0},
 //	{(uint32_t)&RawADCDataBuffer[5],		"CH05_PC5", FUNC_INT16, COLOR_WHITE, COLOR_RED, 0},
 ////end osseo table
-
+MotorStatusStruct MotorXStatus = { (uint32_t)&Motors[M_X].POSITION, X_HOME, X_LIMIT };
+MotorStatusStruct MotorYStatus = { (uint32_t)&Motors[M_X].POSITION, Y_HOME, Y_LIMIT };
+MotorStatusStruct MotorZStatus = { (uint32_t)&Motors[M_X].POSITION, Z_HOME, Z_LIMIT };
 
 LcdVariableInfo LcdVarsTable[] = {
 	{ (uint32_t)1, "ROBO25_X1", FUNC_TITLE, COLOR_RED, COLOR_MAGENTA, 0 },
@@ -61,7 +63,10 @@ LcdVariableInfo LcdVarsTable[] = {
 //	{(uint32_t)&RawADCDataBuffer[4], "CH05_PB1", FUNC_INT16, COLOR_WHITE, COLOR_MAGENTA, 0},
 	{(uint32_t)&laserTemperature,    "LASER_TMP", FUNC_FLOAT, COLOR_WHITE, COLOR_MAGENTA, 0},
 	{(uint32_t)&RawADCDataBuffer[5], "CH05_PC5", FUNC_INT16, COLOR_WHITE, COLOR_MAGENTA, 0},
-
+	
+	{(uint32_t)&MotorXStatus, "MtrX Pos", FUNC_MOTOR_STATUS, COLOR_WHITE, COLOR_MAGENTA, 0},
+	
+	
 	{(uint32_t)&Motors[M_X].POSITION, "MtrX Pos", FUNC_INT32, COLOR_WHITE, COLOR_MAGENTA, 0},
 //	{(uint32_t)&Motors[M_X].PULSES_TO_GO, "X Pls2Go", FUNC_INT32, COLOR_WHITE, COLOR_MAGENTA, 0},
 	{(uint32_t)&Motors[M_Y].POSITION, "MtrY Pos", FUNC_INT32, COLOR_WHITE, COLOR_MAGENTA, 0},
