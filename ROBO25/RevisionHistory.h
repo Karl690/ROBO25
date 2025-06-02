@@ -1,7 +1,7 @@
 #pragma once
 
 #define RevisionHeader "ROBO25"
-#define MajorStep "1.002"
+#define MajorStep "1.003"
 #define RevisionDate "6/2/2025"
 #define InstallPath "c:/repetrel/bin/firmware/"
 
