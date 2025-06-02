@@ -65,16 +65,11 @@ LcdVariableInfo LcdVarsTable[] = {
 	{(uint32_t)&RawADCDataBuffer[5], "CH05_PC5", FUNC_INT16, COLOR_WHITE, COLOR_MAGENTA, 0},
 	
 	{(uint32_t)&MotorXStatus, "MtrX Pos", FUNC_MOTOR_STATUS, COLOR_WHITE, COLOR_MAGENTA, 0},
-	
-	
-	{(uint32_t)&Motors[M_X].POSITION, "MtrX Pos", FUNC_INT32, COLOR_WHITE, COLOR_MAGENTA, 0},
-//	{(uint32_t)&Motors[M_X].PULSES_TO_GO, "X Pls2Go", FUNC_INT32, COLOR_WHITE, COLOR_MAGENTA, 0},
-	{(uint32_t)&Motors[M_Y].POSITION, "MtrY Pos", FUNC_INT32, COLOR_WHITE, COLOR_MAGENTA, 0},
-//	{(uint32_t)&Motors[M_Y].PULSES_TO_GO, "Y Pls2Go", FUNC_INT32, COLOR_WHITE, COLOR_MAGENTA, 0},
-	{(uint32_t)&Motors[M_Z].POSITION, "MtrZ Pos", FUNC_INT32, COLOR_WHITE, COLOR_MAGENTA, 0},
-		{(uint32_t)&Motors[M_A].POSITION, "MtrA Pos", FUNC_INT32, COLOR_WHITE, COLOR_MAGENTA, 0},
-		{(uint32_t)&Motors[M_B].POSITION, "MtrB Pos", FUNC_INT32, COLOR_WHITE, COLOR_MAGENTA, 0},
-		{(uint32_t)&Motors[M_C].POSITION, "MtrC Pos", FUNC_INT32, COLOR_WHITE, COLOR_MAGENTA, 0},
+	{(uint32_t)&MotorYStatus, "MtrY Pos", FUNC_MOTOR_STATUS, COLOR_WHITE, COLOR_MAGENTA, 0},
+	{(uint32_t)&MotorZStatus, "MtrZ Pos", FUNC_MOTOR_STATUS, COLOR_WHITE, COLOR_MAGENTA, 0},
+	{(uint32_t)&Motors[M_A].POSITION, "MtrA Pos", FUNC_INT32, COLOR_WHITE, COLOR_MAGENTA, 0},
+	{(uint32_t)&Motors[M_B].POSITION, "MtrB Pos", FUNC_INT32, COLOR_WHITE, COLOR_MAGENTA, 0},
+	{(uint32_t)&Motors[M_C].POSITION, "MtrC Pos", FUNC_INT32, COLOR_WHITE, COLOR_MAGENTA, 0},
 	{(uint32_t)&Motors[M_X].HomeSense, "X Home  ", FUNC_BAR_STATUS, COLOR_WHITE, COLOR_LIME, 0},
 	{(uint32_t)&Motors[M_Y].HomeSense, "Y Home  ", FUNC_BAR_STATUS, COLOR_WHITE, COLOR_LIME, 0},
 	{(uint32_t)&Motors[M_Z].HomeSense, "Z Home  ", FUNC_BAR_STATUS, COLOR_WHITE, COLOR_LIME, 0},

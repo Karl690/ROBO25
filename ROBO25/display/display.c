@@ -277,6 +277,17 @@ void Format_SoapStringWithIndex(uint8_t row, void* info, uint16_t* colorTable)
 	DrawString(VALUE_POS, PADDING, strTempVal, colorTable[varInfo->Color_2]);
 }
 
+void Format_MotorStatus(uint8_t row, void* info, uint16_t* colorTable)
+{
+	varInfo = (LcdVariableInfo*)info;
+	DrawString(LEFT_PADDING, PADDING, varInfo->Label, colorTable[varInfo->Color_1]); //label?
+	MotorStatusStruct* motorStatus = (MotorStatusStruct*)varInfo->VariablePointer;
+	uint8_t gross = pinRead(motorStatus->GrossMomePin);	
+	uint8_t fine = pinRead(motorStatus->FineHome);
+	
+	sprintf(strTempVal, "%08d   %02X  %02X", (int)motorStatus->MotorPosition, gross, fine);
+	DrawString(VALUE_POS, PADDING, strTempVal, colorTable[varInfo->Color_2]);
+}
 /////////////////////////////////////////////////////////////////////////////////
 void UpdateScreen(SPI_LCD_HandleTypeDef* LcdHandler, LcdVariableInfo* InfoToDisplay)
 {
@@ -309,9 +320,9 @@ void UpdateScreen(SPI_LCD_HandleTypeDef* LcdHandler, LcdVariableInfo* InfoToDisp
 			case FUNC_MEMDUMPASCII: Format_MemoryDumpAscii(row, &InfoToDisplay[row], colorTable);   			break;
 			case FUNC_MEMDUMPHEX:   Format_MemoryDumpHex(row,&InfoToDisplay[row], colorTable);     				break;
 			case FUNC_MEMDISPASCII: Format_MemoryDisplayAscii(row,&InfoToDisplay[row], colorTable);				break;
-			case FUNC_MEMDISPASCIIHEX: Format_MemoryDisplayAsciiHex(row, &InfoToDisplay[row], colorTable); break;
+			case FUNC_MEMDISPASCIIHEX: Format_MemoryDisplayAsciiHex(row, &InfoToDisplay[row], colorTable);		break;
 			case FUNC_ASCI_SOAP: 	Format_SoapStringWithIndex(row,&InfoToDisplay[row], colorTable);			break;
-
+			case FUNC_MOTOR_STATUS: Format_MotorStatus(row, &InfoToDisplay[row], colorTable);					break;
 			}
 		}else {
 			isValid = 0;

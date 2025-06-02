@@ -1,6 +1,6 @@
 #pragma once
 #include <stdint.h>
-
+#include "main.h"
 typedef enum {
 	FUNC_INT,
 	FUNC_INT16,
