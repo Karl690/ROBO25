@@ -43,8 +43,11 @@ char TestString[] ="test String 12345";
 //	{(uint32_t)&RawADCDataBuffer[5],		"CH05_PC5", FUNC_INT16, COLOR_WHITE, COLOR_RED, 0},
 ////end osseo table
 MotorStatusStruct MotorXStatus = { (uint32_t)&Motors[M_X].POSITION, X_HOME, X_LIMIT };
-MotorStatusStruct MotorYStatus = { (uint32_t)&Motors[M_X].POSITION, Y_HOME, Y_LIMIT };
-MotorStatusStruct MotorZStatus = { (uint32_t)&Motors[M_X].POSITION, Z_HOME, Z_LIMIT };
+MotorStatusStruct MotorYStatus = { (uint32_t)&Motors[M_Y].POSITION, Y_HOME, Y_LIMIT };
+MotorStatusStruct MotorZStatus = { (uint32_t)&Motors[M_Z].POSITION, Z_HOME, Z_LIMIT };
+MotorStatusStruct MotorAStatus = { (uint32_t)&Motors[M_A].POSITION, A_HOME, A_LIMIT };
+MotorStatusStruct MotorBStatus = { (uint32_t)&Motors[M_B].POSITION, A_HOME, A_LIMIT };
+MotorStatusStruct MotorCStatus = { (uint32_t)&Motors[M_C].POSITION, B_HOME, B_LIMIT };
 
 LcdVariableInfo LcdVarsTable[] = {
 	{ (uint32_t)1, "ROBO25_X1", FUNC_TITLE, COLOR_RED, COLOR_MAGENTA, 0 },
@@ -67,15 +70,10 @@ LcdVariableInfo LcdVarsTable[] = {
 	{(uint32_t)&MotorXStatus, "MtrX Pos", FUNC_MOTOR_STATUS, COLOR_WHITE, COLOR_MAGENTA, 0},
 	{(uint32_t)&MotorYStatus, "MtrY Pos", FUNC_MOTOR_STATUS, COLOR_WHITE, COLOR_MAGENTA, 0},
 	{(uint32_t)&MotorZStatus, "MtrZ Pos", FUNC_MOTOR_STATUS, COLOR_WHITE, COLOR_MAGENTA, 0},
-	{(uint32_t)&Motors[M_A].POSITION, "MtrA Pos", FUNC_INT32, COLOR_WHITE, COLOR_MAGENTA, 0},
-	{(uint32_t)&Motors[M_B].POSITION, "MtrB Pos", FUNC_INT32, COLOR_WHITE, COLOR_MAGENTA, 0},
-	{(uint32_t)&Motors[M_C].POSITION, "MtrC Pos", FUNC_INT32, COLOR_WHITE, COLOR_MAGENTA, 0},
-	{(uint32_t)&Motors[M_X].HomeSense, "X Home  ", FUNC_BAR_STATUS, COLOR_WHITE, COLOR_LIME, 0},
-	{(uint32_t)&Motors[M_Y].HomeSense, "Y Home  ", FUNC_BAR_STATUS, COLOR_WHITE, COLOR_LIME, 0},
-	{(uint32_t)&Motors[M_Z].HomeSense, "Z Home  ", FUNC_BAR_STATUS, COLOR_WHITE, COLOR_LIME, 0},
-	{(uint32_t)&Motors[M_A].HomeSense, "A Home  ", FUNC_BAR_STATUS, COLOR_WHITE, COLOR_LIME, 0},
-	{(uint32_t)&Motors[M_B].HomeSense, "B Home  ", FUNC_BAR_STATUS, COLOR_WHITE, COLOR_LIME, 0},
-	{(uint32_t)&Motors[M_C].HomeSense, "C Home  ", FUNC_BAR_STATUS, COLOR_WHITE, COLOR_LIME, 0},
+	{(uint32_t)&MotorAStatus, "MtrA Pos", FUNC_MOTOR_STATUS, COLOR_WHITE, COLOR_MAGENTA, 0},
+	{(uint32_t)&MotorBStatus, "MtrB Pos", FUNC_MOTOR_STATUS, COLOR_WHITE, COLOR_MAGENTA, 0},
+	{(uint32_t)&MotorCStatus, "MtrC Pos", FUNC_MOTOR_STATUS, COLOR_WHITE, COLOR_MAGENTA, 0},
+
 //{(uint32_t)&MotorZ.POSITION,			"MtrZ Pos", FUNC_INT32,		COLOR_WHITE, COLOR_MAGENTA, 0},
 //	{(uint32_t)&MotorZ.PULSES_TO_GO,		"Z Pls2Go", FUNC_INT32, COLOR_WHITE, COLOR_MAGENTA, 0},
 //	{(uint32_t)&MotorA.POSITION,			"MtrA Pos", FUNC_INT32,		COLOR_WHITE, COLOR_MAGENTA, 0},
