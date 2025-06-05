@@ -845,12 +845,12 @@ void setFlasherVarPtr(flasherVarSel_t varSel)
 	 _gs._flasher.varSel = varSel;
 	switch (varSel)
 	{
-	case FLASHER_VAR_SEL_ERROR:                     _gs._flasher.varPtr = (int *)&_gs._flasher.error; break;
-	case FLASHER_VAR_SEL_CMD_RECEIVED:              _gs._flasher.varPtr = (int *)&_gs._flasher.cmd_received; break;
-	case FLASHER_VAR_SEL_ACK_PENDING:               _gs._flasher.varPtr = (int *)&_gs._flasher.ack_pending; break;
+	case FLASHER_VAR_SEL_ERROR:                     _gs._flasher.varPtr = &_gs._flasher.error; break;
+	case FLASHER_VAR_SEL_CMD_RECEIVED:              _gs._flasher.varPtr = &_gs._flasher.cmd_received; break;
+	case FLASHER_VAR_SEL_ACK_PENDING:               _gs._flasher.varPtr = &_gs._flasher.ack_pending; break;
 	case FLASHER_VAR_SEL_G4_DWELL_TIMER:            _gs._flasher.varPtr = (int *)&_g4DwellTimer; break;
 	case FLASHER_VAR_SEL_GCODE_PAUSED:              _gs._flasher.varPtr = (int *)&_gcodePaused; break;
-	case FLASHER_VAR_SEL_ABORTING:                  _gs._flasher.varPtr = (int *)&_abortInProgress; break;
+	case FLASHER_VAR_SEL_ABORTING:                  _gs._flasher.varPtr = &_abortInProgress; break;
 	case FLASHER_VAR_SEL_BLOCK_ALL_MOTION:          _gs._flasher.varPtr = (int *)&_blockAllMotion; break;
 	case FLASHER_VAR_SEL_BLOCK_ABS_MOTION:          _gs._flasher.varPtr = (int *)&_blockAbsoluteMotion; break;
 	//case FLASHER_VAR_SEL_MOTION_OCCURRED:         _gs._flasher.varPtr = (int *)&_motionHasOccurred; break;

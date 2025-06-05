@@ -25,7 +25,7 @@
 #include "headSetup.h"
 #include "MotorDriver.h"
 #include "GCode.h"
-
+#include "adc.h"
 // from gcode.h
 extern byte PersistantHotheadAddress;
 extern byte PersistantHotbedAddress;

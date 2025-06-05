@@ -292,6 +292,9 @@
     <ClCompile Include="sysmem.c">
       <Filter>library</Filter>
     </ClCompile>
+    <ClCompile Include="src\taskmanager.c">
+      <Filter>src</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="usb_lib\inc\usbd_usr.h">
@@ -921,6 +924,9 @@
     </ClInclude>
     <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32_USB_Device_Library\Core\Inc\usbd_ioreq.h">
       <Filter>library</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\taskmanager.h">
+      <Filter>inc</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

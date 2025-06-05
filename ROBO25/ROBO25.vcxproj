@@ -142,6 +142,7 @@
     <ClCompile Include="src\pinInit.c" />
     <ClCompile Include="src\pnp.c" />
     <ClCompile Include="src\Serial.c" />
+    <ClCompile Include="src\taskmanager.c" />
     <ClCompile Include="sysmem.c" />
     <ClCompile Include="usb_lib\src\usbd_cdc_core.c" />
     <ClCompile Include="usb_lib\src\usbd_cdc_vcp.c" />
@@ -358,6 +359,7 @@
     <ClInclude Include="inc\pinout.h" />
     <ClInclude Include="inc\pnp.h" />
     <ClInclude Include="inc\Serial.h" />
+    <ClInclude Include="inc\taskmanager.h" />
     <ClInclude Include="RevisionHistory.h" />
     <ClInclude Include="usb_lib\inc\usbd_cdc_core.h" />
     <ClInclude Include="usb_lib\inc\usbd_cdc_vcp.h" />

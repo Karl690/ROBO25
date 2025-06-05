@@ -1231,7 +1231,7 @@ typedef enum {
 typedef struct {
 	flasherLightSel_t   lightSel;
 	flasherVarSel_t     varSel;
-	int                 *varPtr;
+	void                 *varPtr;
 	int                 error;
 	int                 cmd_received;
 	int                 ack_pending;
@@ -2451,6 +2451,14 @@ extern int	CO2LaserAnalogPwrPWM;
 extern int Co2LaserWatchDogTimer;
 extern int Update595Index;
 extern int McodeDrainState[];
+
+//////////// 6/4/2025 //////////////////////////////// 
+extern int CommandReadyToProcessFlag;
+extern int ExecuteImmediateFlag;
+extern int MAX_TOOL_NUMBER;
+extern boolean _serialPortRxOverrunFlag;
+//////////////////////////////////////////////
+
 #define M610_State_Ofset 7			//open drain aux outputs J27
 #define M611_State_Ofset 6
 #define M612_State_Ofset 3
@@ -2463,6 +2471,8 @@ extern int McodeDrainState[];
 
 ////////////////////////////////////////////////////////////////////////////////
 //  Public Methods available in main
+
+
 ////////////////////////////////////////////////////////////////////////////////
 
 extern uint32_t interruptsOff(void);
@@ -2549,7 +2559,10 @@ extern boolean SetupEXTI(int, probeType_t, EXTITrigger_TypeDef, int);
 extern void DisableEXTI(void);
 
 extern void SendPNPSPIDataToSpi2(uint16_t);
+void setSensorStateToUnknown(sensorStruct *sensorPtr);
 ////////////////////////////////////////////////////////////////////////////////
+extern void AddCommandToQue(command_t);
+
 
 ////////////////////////////////////////////////////////////////////////////////
 #endif // #ifndef main_HEADER // prevent double dipping - MUST BE LAST LINE OF FILE

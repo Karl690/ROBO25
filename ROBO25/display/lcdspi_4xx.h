@@ -4,6 +4,7 @@
 #include "pinout.h"
 #if defined(FK_407) || defined(CORE_407I) || defined(CORE_407Z)
 #include "LcdDefinitions.h"
+#include "st7789.h"
 
 /**
   * @brief  SPI handle Structure definition
