@@ -63,8 +63,8 @@
 #define SPi2_Sclk		  (PIN_PORT_B | PIN_NUM_10  | PIN_INIT_LOW  | OUTPUT_PP_50MHZ)
 
 
-//#ifdef USE_AB_ENCODER
-#define CO2_LASER_PWM   (PIN_AF_TIM2       | PIN_OTYPE_PUSHPULL | PIN_OSPEED_100MHZ | PIN_PORT_A | PIN_NUM_03 | PIN_INIT_HIGH)
+//#ifdef USE_AB_ENCODER CO2_LASER_PWM
+#define CO2_LASER_PWM   (PIN_AF_TIM2       | PIN_OTYPE_PUSHPULL | PIN_OSPEED_100MHZ | PIN_PORT_B | PIN_NUM_07 | PIN_INIT_HIGH)
 
 
 //#define PANEL_ENC_A     (INPUT_PULLUP      | PIN_PORT_A | PIN_NUM_00 | PIN_AF_TIM5)
@@ -81,62 +81,6 @@
 #define J17_15          (PIN_UNDEFINED     | PIN_PORT_H | PIN_NUM_09)  // undefined
 #define J17_16          (PIN_UNDEFINED     | PIN_PORT_H | PIN_NUM_11)  // undefined
 
-//#define SWAP_XYZ_ABC_PINS
-#ifdef SWAP_XYZ_ABC_PINS
-/*allows using abc instead of abc, for when there is input pin spiked and no longer working*/
-//X_Motor
-#define A_DIR           (OUTPUT_PP_50MHZ   | PIN_PORT_E | PIN_NUM_05)//X10
-#define A_HOME          (INPUT_FLOATING    | PIN_PORT_E | PIN_NUM_01)//X10
-#define A_STEP          (OUTPUT_PP_50MHZ   | PIN_PORT_E | PIN_NUM_04)//X10
-//Y_Motor
-#define B_DIR           (OUTPUT_PP_50MHZ   | PIN_PORT_E | PIN_NUM_06)//X10
-#define B_HOME          (INPUT_FLOATING    | PIN_PORT_E | PIN_NUM_03)//X10
-#define B_STEP          (OUTPUT_PP_50MHZ   | PIN_PORT_A | PIN_NUM_08)//X10
-//Z_Motor
-#define C_DIR           (OUTPUT_PP_50MHZ   | PIN_PORT_D | PIN_NUM_14)//x10
-#define C_HOME          (INPUT_FLOATING    | PIN_PORT_E | PIN_NUM_00)
-#define C_STEP          (OUTPUT_PP_50MHZ   | PIN_PORT_B | PIN_NUM_05)
-//A_Motor
-#define X_DIR           (OUTPUT_PP_50MHZ   | PIN_PORT_D | PIN_NUM_06)
-#define X_HOME          (INPUT_PULLUP      | PIN_PORT_B | PIN_NUM_03)
-#define X_STEP          (OUTPUT_PP_50MHZ   | PIN_PORT_D | PIN_NUM_04)
-//B_motor
-#define Y_DIR           (OUTPUT_PP_50MHZ   | PIN_PORT_B | PIN_NUM_00  | PIN_INIT_LOW)
-#define Y_HOME          (INPUT_PULLUP      | PIN_PORT_E | PIN_NUM_07)
-#define Y_STEP          (OUTPUT_PP_50MHZ   | PIN_PORT_D | PIN_NUM_15 | PIN_INIT_LOW)
-//C_Motor
-#define Z_DIR           (OUTPUT_PP_50MHZ   | PIN_PORT_A | PIN_NUM_10)
-#define Z_HOME          (INPUT_PULLUP      | PIN_PORT_A | PIN_NUM_06)
-#define Z_STEP          (OUTPUT_PP_50MHZ   | PIN_PORT_A | PIN_NUM_02 | PIN_INIT_LOW)
-
-#else
-////X_Motor
-//#define X_DIR           (OUTPUT_PP_50MHZ   | PIN_PORT_E | PIN_NUM_05)//X10
-//#define X_HOME          (INPUT_FLOATING    | PIN_PORT_E | PIN_NUM_01)//X10
-//#define X_STEP          (OUTPUT_PP_50MHZ   | PIN_PORT_E | PIN_NUM_04)//X10
-////Y_Motor
-//#define Y_DIR           (OUTPUT_PP_50MHZ   | PIN_PORT_E | PIN_NUM_06)//X10
-//#define Y_HOME          (INPUT_FLOATING    | PIN_PORT_E | PIN_NUM_03)//X10
-//#define Y_STEP          (OUTPUT_PP_50MHZ   | PIN_PORT_A | PIN_NUM_08)//X10
-////Z_Motor
-//#define Z_DIR           (OUTPUT_PP_50MHZ   | PIN_PORT_D | PIN_NUM_14)//x10
-//#define Z_HOME          (INPUT_FLOATING    | PIN_PORT_E | PIN_NUM_00)
-//#define Z_STEP          (OUTPUT_PP_50MHZ   | PIN_PORT_B | PIN_NUM_05)
-////A_Motor
-//#define A_DIR           (OUTPUT_PP_50MHZ   | PIN_PORT_D | PIN_NUM_06)
-//#define A_HOME          (INPUT_PULLUP      | PIN_PORT_B | PIN_NUM_03)
-//#define A_STEP          (OUTPUT_PP_50MHZ   | PIN_PORT_D | PIN_NUM_04)
-////B_motor
-//#define B_DIR           (OUTPUT_PP_50MHZ   | PIN_PORT_B | PIN_NUM_00  | PIN_INIT_LOW)
-//#define B_HOME          (INPUT_PULLUP      | PIN_PORT_E | PIN_NUM_07)
-//#define B_STEP          (OUTPUT_PP_50MHZ   | PIN_PORT_D | PIN_NUM_15 | PIN_INIT_LOW)
-////C_Motor
-//#define C_DIR           (OUTPUT_PP_50MHZ   | PIN_PORT_A | PIN_NUM_10)
-//#define C_HOME          (INPUT_PULLUP      | PIN_PORT_A | PIN_NUM_06)
-//#define C_STEP          (OUTPUT_PP_50MHZ   | PIN_PORT_A | PIN_NUM_02 | PIN_INIT_LOW)
-//#endif /* */
-////standard pins
-//X_Motor
 #define X_DIR           (OUTPUT_PP_50MHZ   | PIN_PORT_E | PIN_NUM_04)//PIN_PORT_E | PIN_NUM_05
 #define X_HOME          (INPUT_FLOATING    | PIN_PORT_A | PIN_NUM_09)//PIN_PORT_E | PIN_NUM_01
 #define X_LIMIT			(INPUT_FLOATING    | PIN_PORT_A | PIN_NUM_10)
@@ -166,7 +110,6 @@
 #define C_HOME          (INPUT_PULLUP      | PIN_PORT_D | PIN_NUM_11)//PIN_PORT_A | PIN_NUM_06
 #define C_LIMIT			(INPUT_PULLUP      | PIN_PORT_E | PIN_NUM_02)
 #define C_STEP          (OUTPUT_PP_50MHZ   | PIN_PORT_D | PIN_NUM_15 | PIN_INIT_LOW)//PIN_PORT_A | PIN_NUM_02
-#endif /* */
 //standard pins
 
 
@@ -178,8 +121,8 @@
 
 #define CAN1_RX         (PIN_AF_CAN1       | PIN_PORT_D | PIN_NUM_00 | PIN_PUPPD_PULLUP)//PB0
 #define CAN1_TX         (PIN_AF_CAN1       | PIN_PORT_D | PIN_NUM_01)                   //PB1
-#define CAN2_RX         (PIN_AF_CAN2       | PIN_PORT_B | PIN_NUM_12 | PIN_PUPPD_PULLUP)//PB12
-#define CAN2_TX         (PIN_AF_CAN2       | PIN_PORT_B | PIN_NUM_13)                  //PB13
+//#define CAN2_RX         (PIN_AF_CAN2       | PIN_PORT_B | PIN_NUM_12 | PIN_PUPPD_PULLUP)//PB12
+//#define CAN2_TX         (PIN_AF_CAN2       | PIN_PORT_B | PIN_NUM_13)                  //PB13
 #define DAC2_OUT        (ANALOG_FLOATING   | PIN_PORT_A | PIN_NUM_05)
 //#define DRAIN1          (OUTPUT_PP_50MHZ   | PIN_PORT_D | PIN_NUM_11)
 //#define DRAIN2          (OUTPUT_PP_50MHZ   | PIN_PORT_D | PIN_NUM_11)
@@ -189,12 +132,12 @@
 #define HEARTBEAT       (OUTPUT_PP_2MHZ    | PIN_PORT_C | PIN_NUM_13)
 #define HSS_AUX_PWR1    (OUTPUT_PP_50MHZ   | PIN_PORT_D | PIN_NUM_05)  //M601 J59 pin 1 AUX1
 #define HSS_AUX_PWR2    (OUTPUT_PP_50MHZ   | PIN_PORT_D | PIN_NUM_07)  //M602 J59 pin 2 AUX2
-#define HSS_AUX_PWR4    (OUTPUT_PP_50MHZ   | PIN_PORT_B | PIN_NUM_04)  //M603 J59 pin 3 AUX4
-#define HSS_AUX_PWR5    (OUTPUT_PP_50MHZ   | PIN_PORT_C | PIN_NUM_04)  //M604 J59 pin 4 AUX5
-#define HSS_AUX_PWR6    (OUTPUT_PP_50MHZ   | PIN_PORT_D | PIN_NUM_10)  //M605
-#define HSS_AUX_PWR7    (OUTPUT_PP_50MHZ   | PIN_PORT_B | PIN_NUM_11)  //M606
-#define HSS_AUX_PWR8    (OUTPUT_PP_50MHZ   | PIN_PORT_B | PIN_NUM_10)  //CO2 Laser SSR AC ON
-#define HSS_AUX_PWR9    (OUTPUT_PP_50MHZ   | PIN_PORT_E | PIN_NUM_15)  //co2 laser pump
+//#define HSS_AUX_PWR4    (OUTPUT_PP_50MHZ   | PIN_PORT_B | PIN_NUM_04)  //M603 J59 pin 3 AUX4
+//#define HSS_AUX_PWR5    (OUTPUT_PP_50MHZ   | PIN_PORT_C | PIN_NUM_04)  //M604 J59 pin 4 AUX5
+//#define HSS_AUX_PWR6    (OUTPUT_PP_50MHZ   | PIN_PORT_D | PIN_NUM_10)  //M605
+//#define HSS_AUX_PWR7    (OUTPUT_PP_50MHZ   | PIN_PORT_B | PIN_NUM_11)  //M606
+//#define HSS_AUX_PWR8    (OUTPUT_PP_50MHZ   | PIN_PORT_B | PIN_NUM_10)  //CO2 Laser SSR AC ON
+//#define HSS_AUX_PWR9    (OUTPUT_PP_50MHZ   | PIN_PORT_E | PIN_NUM_15)  //co2 laser pump
 #define J18_13          (PIN_UNDEFINED     | PIN_PORT_B | PIN_NUM_01)  // undefined
 #define J18_14          (PIN_UNDEFINED     | PIN_PORT_H | PIN_NUM_03)  // undefined
 #define J18_15          (PIN_UNDEFINED     | PIN_PORT_H | PIN_NUM_04)  // undefined
@@ -253,18 +196,6 @@
 #define DAC1_OUT        PIN_UNDEFINED
 
 
-
-//#define GB_DEBUG_PIN7           (OUTPUT_PP_50MHZ      | PIN_PORT_A | PIN_NUM_00 | PIN_INIT_LOW) // a
-//#define GB_DEBUG_PIN7_SET       GPIOA->BSRRL = GPIO_Pin_0
-//#define GB_DEBUG_PIN7_CLEAR     GPIOA->BSRRH = GPIO_Pin_0
-//
-//#define GB_DEBUG_PIN8           (OUTPUT_PP_50MHZ      | PIN_PORT_A | PIN_NUM_01 | PIN_INIT_LOW) // b
-//#define GB_DEBUG_PIN8_SET       GPIOA->BSRRL = GPIO_Pin_1
-//#define GB_DEBUG_PIN8_CLEAR     GPIOA->BSRRH = GPIO_Pin_1
-//
-//#define GB_DEBUG_PIN9           (OUTPUT_PP_50MHZ      | PIN_PORT_A | PIN_NUM_04 | PIN_INIT_LOW) // s
-//#define GB_DEBUG_PIN9_SET       GPIOA->BSRRL = GPIO_Pin_4
-//#define GB_DEBUG_PIN9_CLEAR     GPIOA->BSRRH = GPIO_Pin_4
 
 
 

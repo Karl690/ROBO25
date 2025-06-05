@@ -42,11 +42,12 @@ void pinInitAll(void)
 	pinInit(BOOT1);   // undefined
 	pinInit(C_DIR);
 	pinInit(C_HOME);
+	pinInit(C_LIMIT);
 	pinInit(C_STEP);
 	pinInit(CAN1_RX);
 	pinInit(CAN1_TX);
-	pinInit(CAN2_RX);
-	pinInit(CAN2_TX);
+//	pinInit(CAN2_RX);
+//	pinInit(CAN2_TX);
 
 	pinInit(DAC2_OUT);
 //		pinInit(DRAIN1);
@@ -58,12 +59,12 @@ void pinInitAll(void)
 	pinInit(HEARTBEAT_PIN);
 	pinInit(HSS_AUX_PWR1);
 	pinInit(HSS_AUX_PWR2);
-	pinInit(HSS_AUX_PWR4);
-	pinInit(HSS_AUX_PWR5);
-	pinInit(HSS_AUX_PWR6);
-	pinInit(HSS_AUX_PWR7);
-	pinInit(HSS_AUX_PWR8);
-	pinInit(HSS_AUX_PWR9);
+//	pinInit(HSS_AUX_PWR4);
+//	pinInit(HSS_AUX_PWR5);
+//	pinInit(HSS_AUX_PWR6);
+//	pinInit(HSS_AUX_PWR7);
+//	pinInit(HSS_AUX_PWR8);
+//	pinInit(HSS_AUX_PWR9);
 
 		//pinInit(J18_13);   // undefined
 		//pinInit(J18_14);   // undefined

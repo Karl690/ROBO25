@@ -46,8 +46,8 @@ MotorStatusStruct MotorXStatus = { (uint32_t)&Motors[M_X].POSITION, X_HOME, X_LI
 MotorStatusStruct MotorYStatus = { (uint32_t)&Motors[M_Y].POSITION, Y_HOME, Y_LIMIT };
 MotorStatusStruct MotorZStatus = { (uint32_t)&Motors[M_Z].POSITION, Z_HOME, Z_LIMIT };
 MotorStatusStruct MotorAStatus = { (uint32_t)&Motors[M_A].POSITION, A_HOME, A_LIMIT };
-MotorStatusStruct MotorBStatus = { (uint32_t)&Motors[M_B].POSITION, A_HOME, A_LIMIT };
-MotorStatusStruct MotorCStatus = { (uint32_t)&Motors[M_C].POSITION, B_HOME, B_LIMIT };
+MotorStatusStruct MotorBStatus = { (uint32_t)&Motors[M_B].POSITION, B_HOME, B_LIMIT };
+MotorStatusStruct MotorCStatus = { (uint32_t)&Motors[M_C].POSITION, C_HOME, C_LIMIT };
 
 LcdVariableInfo LcdVarsTable[] = {
 	{ (uint32_t)1, "ROBO25_X1", FUNC_TITLE, COLOR_RED, COLOR_MAGENTA, 0 },

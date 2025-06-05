@@ -1874,12 +1874,12 @@ void initAllHss(void)
 	initHss(NO_HSS_PIN_INDEX, PIN_UNDEFINED);
 	initHss(HSS_AUX_PWR1_INDEX, HSS_AUX_PWR1);
 	initHss(HSS_AUX_PWR2_INDEX, HSS_AUX_PWR2);
-	initHss(HSS_AUX_PWR4_INDEX, HSS_AUX_PWR4);
-	initHss(HSS_AUX_PWR5_INDEX, HSS_AUX_PWR5);
-	initHss(HSS_AUX_PWR6_INDEX, HSS_AUX_PWR6);
-	initHss(HSS_AUX_PWR7_INDEX, HSS_AUX_PWR7);
-	initHss(HSS_AUX_PWR8_INDEX, HSS_AUX_PWR8);
-	initHss(HSS_AUX_PWR9_INDEX, HSS_AUX_PWR9);
+//	initHss(HSS_AUX_PWR4_INDEX, HSS_AUX_PWR4);
+//	initHss(HSS_AUX_PWR5_INDEX, HSS_AUX_PWR5);
+//	initHss(HSS_AUX_PWR6_INDEX, HSS_AUX_PWR6);
+//	initHss(HSS_AUX_PWR7_INDEX, HSS_AUX_PWR7);
+//	initHss(HSS_AUX_PWR8_INDEX, HSS_AUX_PWR8);
+//	initHss(HSS_AUX_PWR9_INDEX, HSS_AUX_PWR9);
 //	initHss(DRAIN1_INDEX,       DRAIN1);
 //	initHss(DRAIN2_INDEX,       DRAIN2);
 //	initHss(DRAIN3_INDEX,       DRAIN3);
@@ -1895,11 +1895,11 @@ void initAllHss(void)
 
 	hssFuncToPinIndex[SPINDLE_COOLANT_HSS] = HSS_AUX_PWR1_INDEX;
 	hssFuncToPinIndex[FLOOD_COOLANT_HSS]   = HSS_AUX_PWR2_INDEX;
-	hssFuncToPinIndex[CO2_POWER_SUPPY_HSS] = HSS_AUX_PWR4_INDEX;
-	hssFuncToPinIndex[DDLIGHT_HSS]         = HSS_AUX_PWR5_INDEX;
-	hssFuncToPinIndex[RESPONSE_HSS]        = HSS_AUX_PWR6_INDEX;
-	hssFuncToPinIndex[CHAMBER_FAN_HSS]     = HSS_AUX_PWR7_INDEX;
-	hssFuncToPinIndex[LASER_XHAIR_HSS]     = HSS_AUX_PWR9_INDEX;
+//	hssFuncToPinIndex[CO2_POWER_SUPPY_HSS] = HSS_AUX_PWR4_INDEX;
+//	hssFuncToPinIndex[DDLIGHT_HSS]         = HSS_AUX_PWR5_INDEX;
+//	hssFuncToPinIndex[RESPONSE_HSS]        = HSS_AUX_PWR6_INDEX;
+//	hssFuncToPinIndex[CHAMBER_FAN_HSS]     = HSS_AUX_PWR7_INDEX;
+//	hssFuncToPinIndex[LASER_XHAIR_HSS]     = HSS_AUX_PWR9_INDEX;
 	hssFuncToPinIndex[ULTIMUS_HSS]         = HSS_AUX_PWR1_INDEX; // redundant with SPINDLE_COOLANT
 
 
@@ -6101,7 +6101,7 @@ int main(void)
 	InitAllUARTS(SYSTEM_BAUD_RATE);
 //	USBD_Init(&USB_OTG_dev, USB_OTG_FS_CORE_ID, &USR_desc, &USBD_CDC_cb, &USR_cb);
 	CAN_Config(CAN1);
-	CAN_Config(CAN2);
+//	CAN_Config(CAN2);
 
 	InitializeFixtureOffsets();
 

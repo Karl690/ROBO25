@@ -13,7 +13,7 @@ typedef struct {
 	const AdcTableStruct* ConvertionTable;
 }ADC_ChannelDef;
 
-#define ADC_CHANNEL_NUM 5
+#define ADC_CHANNEL_NUM 6
 
 extern ADC_ChannelDef AdcChannelTable[ADC_CHANNEL_NUM];
 

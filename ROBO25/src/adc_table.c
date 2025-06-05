@@ -167,6 +167,7 @@ ADC_ChannelDef AdcChannelTable[ADC_CHANNEL_NUM] = {
 	{ ADC_Channel_3, ADC2_03_PA3, 0, &RtdTable_1K[0]},
 	{ ADC_Channel_4, ADC2_04_PA4, 0, &RtdTable_1K[0]},
 	{ ADC_Channel_5, ADC2_05_PA5, 0, &RtdTable_1K[0]},
+	{ ADC_Channel_3, ADC2_03_PA3, 0, &RtdTable_1K[0]},
 	//{ ADC_Channel_6, ADC2_06_PA6, 0, &RtdTable_1K[0]},
 	{ ADC_Channel_9, ADC2_09_PB1, 0, &RtdTable_1K[0] },
 	{ ADC_Channel_15, ADC2_15_PC5, 0, &RtdTable_1K[0]},
