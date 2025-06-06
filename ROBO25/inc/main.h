@@ -2462,6 +2462,55 @@ extern int McodeDrainState[];
 
 
 ////////////////////////////////////////////////////////////////////////////////
+extern int homeSensedAxisCntr;
+void SpeedControl(void);
+void serialProcessor(void);
+void SequenceEngine(void);
+void checkBlockingWaits(void);
+void checkForCompletedAbort(void);
+
+void sendOutgoingMail(void);
+void DDLightSelection(void);
+
+void readInputs(void);
+void checkMotorFaultSensor(void);
+void checkMotorLimit1Sensor(void);
+void checkMotorLimit2Sensor(void);
+void spare(void);
+void sendUpdateToHost(void);
+void heartbeat(void);
+void processEverySlice(void);
+void loop_1000Hz_simple_work(void);
+void loop_100Hz_simple_work(void);
+void loop_10Hz_simple_work(void);
+void loop_1Hz_simple_work(void);
+void systicker(void);
+void checkForMia(void);
+void reportCalibrationTemperature(void);
+void ReportXYZLocation(void);
+void ReportOsseoVariables(void);
+void FastLigthControl(int);
+void CleanUpPointers(void);
+void FillArgumentBuffer(char *, char);
+void ContinueToNextStep(void);
+void AddCommandToQue(command_t);
+void initGCodeSequenceEngine(void);
+void ProcessG28MultipassHoming(void);
+void ProcessG38MultipassProbing(void);
+void DwellTimer(void);
+void Hss100HzControl(void);
+void forceHssPwmOff(HssPwmStruct *hss);
+void forceHssPwmOn(HssPwmStruct *hss);
+void EchoBackCommentString(void);
+void sendPendingAcks(void);
+void sendEmoMessage(void);
+void setAllMotionSensorsToUnknownState(void);
+
+
+void CommandProcessor(void);
+
+
+//////////////////////////////////////////////////////////////////////////////////////
 //  Public Methods available in main
 ////////////////////////////////////////////////////////////////////////////////
 
