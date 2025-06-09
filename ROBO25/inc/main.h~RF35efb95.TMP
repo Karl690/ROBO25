@@ -19,10 +19,10 @@
 ////////////////////////////////////////////////////////////////////////////////
 typedef void(*PFUNC)(void);
 
-//old revision string, no longer used, please look in revisionHistory.h for current revision
 #define SOFTWARE_MAJOR_REVISION     4   // XXX  update when a major change occurs (ie, protocol)
-#define SOFTWARE_MINOR_REVISION     253 // XXX  update for major and minor changes
-#define SOFTWARE_TWEAK_REVISION    'A'  // XXX  update for small changes ('z' is for experimental ONLY)
+#define SOFTWARE_MINOR_REVISION     252 // XXX  update for major and minor changes
+#define SOFTWARE_TWEAK_REVISION    'D'  // XXX  update for small changes ('z' is for experimental ONLY)
+
 #define SOFTWARE_DEBUG_REVISION    'a'  // XXX  char update for debug versions  (applies to 'z' versions only  is for experimental ONLY) (display with M115)
 extern const PFUNC F1000HZ[];
 extern const PFUNC F100HZ[];
@@ -1673,12 +1673,12 @@ typedef enum  {
 		NO_HSS_PIN_INDEX = 0,
 		HSS_AUX_PWR1_INDEX = 1,
 		HSS_AUX_PWR2_INDEX = 2,
-//		HSS_AUX_PWR4_INDEX = 3,
-//		HSS_AUX_PWR5_INDEX = 4,
-//		HSS_AUX_PWR6_INDEX = 5,
-//		HSS_AUX_PWR7_INDEX = 6,
-//		HSS_AUX_PWR8_INDEX = 7,
-//		HSS_AUX_PWR9_INDEX = 8,
+		HSS_AUX_PWR4_INDEX = 3,
+		HSS_AUX_PWR5_INDEX = 4,
+		HSS_AUX_PWR6_INDEX = 5,
+		HSS_AUX_PWR7_INDEX = 6,
+		HSS_AUX_PWR8_INDEX = 7,
+		HSS_AUX_PWR9_INDEX = 8,
 		NUM_HSS_PINS
 } hssPin_t;
 
@@ -2439,9 +2439,7 @@ extern int EnclosurePressureDifference;
 extern int EnclosureUvLedPwm;
 extern int EnclosureFanPwm;
 extern int EnclosureDoorLock;
-extern uint8_t EnclosureDoorSense;
-extern int doorSenseState;
-extern uint8_t previous_EnclosureDoorSense;
+extern int EnclosureDoorSense;
 extern int EnclosureCartridgeSense;
 extern int EnclosurePrintBedSense;
 
