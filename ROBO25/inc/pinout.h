@@ -82,7 +82,7 @@
 #define J17_16          (PIN_UNDEFINED     | PIN_PORT_H | PIN_NUM_11)  // undefined
 
 #define X_DIR           (OUTPUT_PP_50MHZ   | PIN_PORT_E | PIN_NUM_04)//PIN_PORT_E | PIN_NUM_05
-#define X_HOME          (INPUT_FLOATING    | PIN_PORT_A | PIN_NUM_09)//PIN_PORT_E | PIN_NUM_01
+#define X_HOME          (INPUT_FLOATING    | PIN_PORT_C | PIN_NUM_01)//PIN_PORT_E | PIN_NUM_01
 #define X_LIMIT			(INPUT_FLOATING    | PIN_PORT_A | PIN_NUM_10)
 #define X_STEP          (OUTPUT_PP_50MHZ   | PIN_PORT_E | PIN_NUM_05)//PIN_PORT_E | PIN_NUM_04
 //Y_Motor

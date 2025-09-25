@@ -303,6 +303,7 @@ void Init_Display(SPI_LCD_HandleTypeDef* LcdHandler, uint8_t SpiIndex, color_mod
 	ST7789_Init(colorMode);
 	LcdHandler->InitState = 1; //it's ok	
 	///ST7789_Fill_Color(BLUE);
+	ST7789_SetDirection(PORTRAIT_ROT180);
 }
 
 void FillRGBRect(int16_t row, int16_t linesize, uint16_t* buf)

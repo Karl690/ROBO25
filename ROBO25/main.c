@@ -4093,7 +4093,7 @@ void ReportXYZLocation(void)
 }
 void ReportOsseoVariables(void)
 {		
-	RPMCounter =(int)30*  TIM3->CNT;
+	RPMCounter =(int)30*  TIM3->CNT;//sdfsd
 	TIM3->CNT = 0;
 	if (EnableOsseoVariablesReporting == 0)return;
 	//float pressure difference = AdcChannelTable[ch].Channel.RawADCDataBuffer;

@@ -147,7 +147,7 @@ typedef enum {
 		#define   MYLCD_YOFFSET			0
 		#define   MYLCD_WIDTH			240
 		#define   MYLCD_HEIGHT			320
-		#define   MYLCD_ORIENTATION		PORTRAIT //PORTRAIT
+		#define   MYLCD_ORIENTATION		PORTRAIT_ROT180 //PORTRAIT
 
 	#elif defined(ST7789_320_240_PORTRAIT)
 		#define   MYLCD_XOFFSET			0
