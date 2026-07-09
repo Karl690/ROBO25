@@ -3366,9 +3366,9 @@ void M_Code_M260(void)
 }
 
 //Parameter Name   Command  Control Type   Air Handler Fan
-//M261 S###			1 - 100 – ON to preset percentage, 0 - OFF UV LED
-//M262 S###			1 - 100 – ON to preset percentage, 0 - Off FAN
-//M263 S###			1 – Engage, 0 – Disable  Door Lock
+//M261 S###			1 - 100 â€“ ON to preset percentage, 0 - OFF UV LED
+//M262 S###			1 - 100 â€“ ON to preset percentage, 0 - Off FAN
+//M263 S###			1 â€“ Engage, 0 â€“ Disable  Door Lock
 	
 
 void M_Code_M261(void)  // set FAN Duty cycle and enable
@@ -6204,7 +6204,7 @@ void M_Code_M762(void)  // transfer system info in ASCII text from host to main 
 		{
 			writeSystemSoapString(0);
 		}
-		else if ((ARG_R == 1.0f) &&  validFirmwareKey(0) && (strncmp((char *)(_sysInfoPtr->soapBaseAddr + FLASH_SOAP_RESERVE_OFFSET), "*M687", 5) == 0))
+		else if ((ARG_R == 1.0f)  && (strncmp((char *)(_sysInfoPtr->soapBaseAddr + FLASH_SOAP_RESERVE_OFFSET), "*M687", 5) == 0))
 		{ // already verified key AND it's in flash and flash not erased), then no need to write
 			sendError("Flash write request of firmware key ignored -- valid key already exists");
 			return;

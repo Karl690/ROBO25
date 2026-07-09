@@ -12,6 +12,13 @@
     <VisualWatchPreferences />
     <MaskInterruptsWhileStepping>false</MaskInterruptsWhileStepping>
     <MemoryWindowPreferences />
+    <RealTimeWatchPreferences>
+      <Presets />
+      <ImplicitPreset>
+        <Watches />
+      </ImplicitPreset>
+      <StopOnOverflow>false</StopOnOverflow>
+    </RealTimeWatchPreferences>
     <LiveVariables />
     <LoadGlobalsWithoutConfirmation>false</LoadGlobalsWithoutConfirmation>
     <NestedLiveVariables>

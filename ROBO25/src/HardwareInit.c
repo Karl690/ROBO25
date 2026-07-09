@@ -89,74 +89,158 @@ void InitGPIO(void)
 //#endif //USE_AB_ENCODER
 }
 
-////////////////////////////////////////////////////////////////////////////////
-
-void InitUSART3(unsigned int baudrate)
-{	// Configure UART @ SYSTEM_BAUD_RATE w/ 8 bits no parity and 1 stop bit, no flow control
-	//used to talk to the EZ80 laser power supply, 9600 baud
-	initClkAndResetAPB1(RCC_APB1Periph_USART3);
-
-	USART_InitTypeDef USART_InitStructure;
-	USART_InitStructure.USART_BaudRate = baudrate;
-	USART_InitStructure.USART_WordLength = USART_WordLength_8b;
-	USART_InitStructure.USART_StopBits = USART_StopBits_1;
-	USART_InitStructure.USART_Parity = USART_Parity_No;
-	USART_InitStructure.USART_HardwareFlowControl = USART_HardwareFlowControl_None;
-	USART_InitStructure.USART_Mode = USART_Mode_Tx | USART_Mode_Rx;
-	USART_Init(USART3, &USART_InitStructure);
-	USART_Cmd(USART3, ENABLE);
-
-	interruptSetupAndEnable(USART3_IRQn, NVIC_PREMPTION_PRIORITY_UARTS);
-	USART_ITConfig(USART3, USART_IT_RXNE, ENABLE);
-}
-
-////////////////////////////////////////////////////////////////////////////////
-
-void InitUART4(unsigned int baudrate)
-{	// Configure UART @ SYSTEM_BAUD_RATE w/ 8 bits no parity and 1 stop bit, no flow control
-	initClkAndResetAPB1(RCC_APB1Periph_UART4);
-
-	USART_InitTypeDef USART_InitStructure;
-	USART_InitStructure.USART_BaudRate = baudrate;
-	USART_InitStructure.USART_WordLength = USART_WordLength_8b;
-	USART_InitStructure.USART_StopBits = USART_StopBits_1;
-	USART_InitStructure.USART_Parity = USART_Parity_No;
-	USART_InitStructure.USART_HardwareFlowControl = USART_HardwareFlowControl_None;
-	USART_InitStructure.USART_Mode = USART_Mode_Tx | USART_Mode_Rx;
-	USART_Init(UART4, &USART_InitStructure);
-	USART_Cmd(UART4, ENABLE);
-
-	interruptSetupAndEnable(UART4_IRQn, NVIC_PREMPTION_PRIORITY_UARTS);
-	USART_ITConfig(UART4, USART_IT_RXNE, ENABLE);
-}
-
-////////////////////////////////////////////////////////////////////////////////
-
-void InitUSART6(unsigned int baudrate)
-{	// Configure UART @ SYSTEM_BAUD_RATE w/ 8 bits no parity and 1 stop bit, no flow control
-	initClkAndResetAPB2(RCC_APB2Periph_USART6);
-
-	USART_InitTypeDef USART_InitStructure;
-	USART_InitStructure.USART_BaudRate = baudrate;
-	USART_InitStructure.USART_WordLength = USART_WordLength_8b;
-	USART_InitStructure.USART_StopBits = USART_StopBits_1;
-	USART_InitStructure.USART_Parity = USART_Parity_No;
-	USART_InitStructure.USART_HardwareFlowControl = USART_HardwareFlowControl_None;
-	USART_InitStructure.USART_Mode = USART_Mode_Tx | USART_Mode_Rx;
-	USART_Init(USART6, &USART_InitStructure);
-	USART_Cmd(USART6, ENABLE);
-
-	interruptSetupAndEnable(USART6_IRQn, NVIC_PREMPTION_PRIORITY_UARTS);
-	USART_ITConfig(USART6, USART_IT_RXNE, ENABLE);
-}
+//////////////////////////////////////////////////////////////////////////////////
+///*initialization for usart2 using DMA receive stream on DMA1_stream5
+// *115200 baud, 8N1, no flow control
+// **/
+//void init_USART2()
+//{		
+//	UART_HandleTypeDef huart2;
+//	//Initialize serial buffers FIRST;
+//	pinInit(PIN_TX2_D05);
+//	pinInit(PIN_RX2_D06); //AF
+//	RCC->APB1ENR |= RCC_APB1ENR_USART2EN; // Enable USART2 clock
+//
+//	USART2->CR1 = 0; // Reset entire CR1
+//	USART2->CR2 = 0; // Reset entire CR2
+//	USART2->CR3 = 0; // Reset entire CR3
+//
+//	// CR1: Word length, parity, TX/RX enable, etc.
+//	// M bit = 0 → 8 data bits (default)
+//	// PCE = 0 → no parity (default)
+//	USART2->CR1 |= 
+//	    (0 << USART_CR1_M_Pos)          |   // 8 data bits (explicit)
+//	    (0 << USART_CR1_PCE_Pos)        |   // Parity disabled (explicit)
+//	    USART_CR1_TE                    |   // Transmitter enable
+//	    USART_CR1_RE                    |   // Receiver enable
+//	    USART_CR1_IDLEIE                |   // IDLE interrupt enable (for efficient RX end detection)
+//	    USART_CR1_UE; // USART enable
+//
+//	// CR2: Stop bits, clock config (for async → all 0)
+//	// STOP = 00 → 1 stop bit (default)
+//	// CLKEN = 0 → no SCLK pin (async mode)
+//	// CPOL = 0 → clock idle low (irrelevant in async)
+//	// CPHA = 0 → first edge (irrelevant)
+//	// LBCL = 0 → no last clock pulse (irrelevant)
+//	USART2->CR2 = 
+//	    (0 << USART_CR2_STOP_Pos)       |   // 1 stop bit (explicit)
+//	    (0 << USART_CR2_CLKEN_Pos)      |   // No clock output
+//	    (0 << USART_CR2_CPOL_Pos)       |   // Clock polarity low (sync only)
+//	    (0 << USART_CR2_CPHA_Pos)       |   // Clock phase (sync only)
+//	    (0 << USART_CR2_LBCL_Pos); // Last bit clock (sync only)
+//
+//	// CR3: DMA enables + hardware flow control (CTS/RTS)
+//	// CTSE = 0, RTSE = 0 → no HW flow control/handshake
+//	USART2->CR3 |= 
+//	    (0 << USART_CR3_CTSE_Pos)       |   // CTS disabled (no HW flow)
+//	    (0 << USART_CR3_RTSE_Pos)       |   // RTS disabled (no HW flow)
+//	    USART_CR3_DMAR                  |   // DMA enable for receiver
+//	    USART_CR3_DMAT; // DMA enable for transmitter
+//
+//	// Baud rate (for PCLK1 = 42 MHz, 115200 baud)
+//	// If you need exactly 15200 baud:
+//	//   USART2->BRR = (42'000'000 + 15200/2) / 15200;  // ≈ 2763 (rounded)
+//	USART2->BRR = (22 << 4) | 12; // ≈ 115200 baud (as before)
+//}
+//// ────────────────────────────────────────────────
+//// DMA1: Stream5 Ch4 = USART2_RX, Stream6 Ch4 = USART2_TX
+//// ────────────────────────────────────────────────
+//void DMA1_Init(void) 
+//{
+//	RCC->AHB1ENR |= RCC_AHB1ENR_DMA1EN;
+//
+//	// RX: DMA1 Stream5 Channel 4 – Circular, Peripheral-to-Memory
+//	DMA1_Stream5->CR   = 0; // Reset
+//	DMA1_Stream5->CR  |= (4 << DMA_SxCR_CHSEL_Pos) |    // Channel 4
+//	                     DMA_SxCR_CIRC |                // Circular mode
+//	                     DMA_SxCR_MINC |                // Memory increment
+//	                     DMA_SxCR_PL_1 |                // Priority high
+//	                     DMA_SxCR_TCIE; // Transfer complete IRQ (optional)
+//
+//	DMA1_Stream5->PAR  = (uint32_t)&USART2->DR; // Peripheral = USART2 DR
+//	DMA1_Stream5->M0AR = (uint32_t)Rx_Buffer2;
+//	DMA1_Stream5->NDTR = 1024;
+//
+//	// TX: DMA1 Stream6 Channel 4 – Normal, Memory-to-Peripheral
+//	DMA1_Stream6->CR   = 0;
+//	DMA1_Stream6->CR  |= (4 << 25) |
+//	                     DMA_SxCR_MINC |
+//	                     DMA_SxCR_DIR_0 |               // Memory → Peripheral
+//	                     DMA_SxCR_TCIE; // TC IRQ
+//
+//	DMA1_Stream6->PAR  = (uint32_t)&USART2->DR;
+//	DMA1_Stream6->M0AR = (uint32_t)Tx_Buffer2; // Filled later
+//
+//	// Enable DMA interrupts (NVIC)
+//	NVIC_EnableIRQ(DMA1_Stream5_IRQn);
+//	//NVIC_EnableIRQ(DMA1_Stream6_IRQn);
+//}
+//void InitUSART3(unsigned int baudrate)
+//{	// Configure UART @ SYSTEM_BAUD_RATE w/ 8 bits no parity and 1 stop bit, no flow control
+//	//used to talk to the EZ80 laser power supply, 9600 baud
+//	initClkAndResetAPB1(RCC_APB1Periph_USART3);
+//
+//	USART_InitTypeDef USART_InitStructure;
+//	USART_InitStructure.USART_BaudRate = baudrate;
+//	USART_InitStructure.USART_WordLength = USART_WordLength_8b;
+//	USART_InitStructure.USART_StopBits = USART_StopBits_1;
+//	USART_InitStructure.USART_Parity = USART_Parity_No;
+//	USART_InitStructure.USART_HardwareFlowControl = USART_HardwareFlowControl_None;
+//	USART_InitStructure.USART_Mode = USART_Mode_Tx | USART_Mode_Rx;
+//	USART_Init(USART3, &USART_InitStructure);
+//	USART_Cmd(USART3, ENABLE);
+//
+//	interruptSetupAndEnable(USART3_IRQn, NVIC_PREMPTION_PRIORITY_UARTS);
+//	USART_ITConfig(USART3, USART_IT_RXNE, ENABLE);
+//}
+//
+//////////////////////////////////////////////////////////////////////////////////
+//
+//void InitUART4(unsigned int baudrate)
+//{	// Configure UART @ SYSTEM_BAUD_RATE w/ 8 bits no parity and 1 stop bit, no flow control
+//	initClkAndResetAPB1(RCC_APB1Periph_UART4);
+//
+//	USART_InitTypeDef USART_InitStructure;
+//	USART_InitStructure.USART_BaudRate = baudrate;
+//	USART_InitStructure.USART_WordLength = USART_WordLength_8b;
+//	USART_InitStructure.USART_StopBits = USART_StopBits_1;
+//	USART_InitStructure.USART_Parity = USART_Parity_No;
+//	USART_InitStructure.USART_HardwareFlowControl = USART_HardwareFlowControl_None;
+//	USART_InitStructure.USART_Mode = USART_Mode_Tx | USART_Mode_Rx;
+//	USART_Init(UART4, &USART_InitStructure);
+//	USART_Cmd(UART4, ENABLE);
+//
+//	interruptSetupAndEnable(UART4_IRQn, NVIC_PREMPTION_PRIORITY_UARTS);
+//	USART_ITConfig(UART4, USART_IT_RXNE, ENABLE);
+//}
+//
+//////////////////////////////////////////////////////////////////////////////////
+//
+//void InitUSART6(unsigned int baudrate)
+//{	// Configure UART @ SYSTEM_BAUD_RATE w/ 8 bits no parity and 1 stop bit, no flow control
+//	initClkAndResetAPB2(RCC_APB2Periph_USART6);
+//
+//	USART_InitTypeDef USART_InitStructure;
+//	USART_InitStructure.USART_BaudRate = baudrate;
+//	USART_InitStructure.USART_WordLength = USART_WordLength_8b;
+//	USART_InitStructure.USART_StopBits = USART_StopBits_1;
+//	USART_InitStructure.USART_Parity = USART_Parity_No;
+//	USART_InitStructure.USART_HardwareFlowControl = USART_HardwareFlowControl_None;
+//	USART_InitStructure.USART_Mode = USART_Mode_Tx | USART_Mode_Rx;
+//	USART_Init(USART6, &USART_InitStructure);
+//	USART_Cmd(USART6, ENABLE);
+//
+//	interruptSetupAndEnable(USART6_IRQn, NVIC_PREMPTION_PRIORITY_UARTS);
+//	USART_ITConfig(USART6, USART_IT_RXNE, ENABLE);
+//}
 
 ////////////////////////////////////////////////////////////////////////////////
 
 void InitAllUARTS(unsigned int baudrate)
 {
 
-	InitUSART3(9600);               //external ftdi usb com port
-	InitUSART6(baudrate);              //external ftdi usb com port
+	//InitUSART3(9600);               //not used on robot
+	InitUSART6(baudrate);              //external ch340 usb com port
 }
 
 void CAN_Config(CAN_TypeDef* CANx)

@@ -290,13 +290,11 @@ void Default_Reset_Handler(void)
         "    strlt   r2, [r0], #4\n"
         "    blt     zero_loop");
 
-#ifdef __FPU_USED
   /* Enable FPU.*/ 
   __asm("  LDR.W R0, =0xE000ED88\n"
         "  LDR R1, [R0]\n"
         "  ORR R1, R1, #(0xF << 20)\n"
         "  STR R1, [R0]");
-#endif	
   /* Call the application's entry point.*/
   main();
 #endif

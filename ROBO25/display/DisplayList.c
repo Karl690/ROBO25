@@ -42,16 +42,16 @@ char TestString[] ="test String 12345";
 //	{(uint32_t)&RawADCDataBuffer[4],		"CH05_PB1", FUNC_INT16, 	COLOR_WHITE,	COLOR_RED, 		0},
 //	{(uint32_t)&RawADCDataBuffer[5],		"CH05_PC5", FUNC_INT16, COLOR_WHITE, COLOR_RED, 0},
 ////end osseo table
-MotorStatusStruct MotorXStatus = { (uint32_t)&Motors[M_X].POSITION, X_HOME, X_LIMIT };
-MotorStatusStruct MotorYStatus = { (uint32_t)&Motors[M_Y].POSITION, Y_HOME, Y_LIMIT };
-MotorStatusStruct MotorZStatus = { (uint32_t)&Motors[M_Z].POSITION, Z_HOME, Z_LIMIT };
-MotorStatusStruct MotorAStatus = { (uint32_t)&Motors[M_A].POSITION, A_HOME, A_LIMIT };
-MotorStatusStruct MotorBStatus = { (uint32_t)&Motors[M_B].POSITION, B_HOME, B_LIMIT };
-MotorStatusStruct MotorCStatus = { (uint32_t)&Motors[M_C].POSITION, C_HOME, C_LIMIT };
+MotorStatusStruct MotorXStatus = { (uint32_t)&Motors[M_X].POSITION, X_HOME, X_HomeFine };
+MotorStatusStruct MotorYStatus = { (uint32_t)&Motors[M_Y].POSITION, Y_HOME, Y_HomeFine };
+MotorStatusStruct MotorZStatus = { (uint32_t)&Motors[M_Z].POSITION, Z_HOME, Z_HomeFine };
+MotorStatusStruct MotorAStatus = { (uint32_t)&Motors[M_A].POSITION, A_HOME, A_HomeFine };
+MotorStatusStruct MotorBStatus = { (uint32_t)&Motors[M_B].POSITION, B_HOME, B_HomeFine };
+MotorStatusStruct MotorCStatus = { (uint32_t)&Motors[M_C].POSITION, C_HOME, C_HomeFine };
 
 LcdVariableInfo LcdVarsTable[] = {
-	{ (uint32_t)1, "ROBO25_X1", FUNC_TITLE, COLOR_RED, COLOR_MAGENTA, 0 },
-	{(uint32_t)&HeartBeat,					HB_STRING, FUNC_INT32, COLOR_WHITE, COLOR_MAGENTA, 0},
+	{ (uint32_t)1, HB_STRING, FUNC_TITLE, COLOR_WHITE, COLOR_MAGENTA, 0 },
+	{(uint32_t)&HeartBeat,HB_STRING, FUNC_INT32, COLOR_WHITE, COLOR_MAGENTA, 0},
 //analog conversion data
 	//_primaryHeadPtr
 //	{(uint32_t)&Head11_Temperature, "Head Temp", FUNC_INT16, COLOR_WHITE, COLOR_MAGENTA, 0},

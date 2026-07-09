@@ -82,35 +82,78 @@
 #define J17_16          (PIN_UNDEFINED     | PIN_PORT_H | PIN_NUM_11)  // undefined
 
 #define X_DIR           (OUTPUT_PP_50MHZ   | PIN_PORT_E | PIN_NUM_04)//PIN_PORT_E | PIN_NUM_05
-#define X_HOME          (INPUT_FLOATING    | PIN_PORT_C | PIN_NUM_01)//PIN_PORT_E | PIN_NUM_01
-#define X_LIMIT			(INPUT_FLOATING    | PIN_PORT_A | PIN_NUM_10)
+#define X_HOME          (INPUT_PULLUP      | PIN_PORT_A | PIN_NUM_09)//PIN_PORT_E | PIN_NUM_01
+#define X_HomeFine		(INPUT_PULLUP      | PIN_PORT_A | PIN_NUM_10)
 #define X_STEP          (OUTPUT_PP_50MHZ   | PIN_PORT_E | PIN_NUM_05)//PIN_PORT_E | PIN_NUM_04
 //Y_Motor
-#define Y_DIR           (OUTPUT_PP_50MHZ   | PIN_PORT_E | PIN_NUM_06)//PIN_PORT_E | PIN_NUM_06
-#define Y_HOME          (INPUT_FLOATING    | PIN_PORT_E | PIN_NUM_00)//PIN_PORT_E | PIN_NUM_03
-#define Y_LIMIT			(INPUT_FLOATING    | PIN_PORT_E | PIN_NUM_01)
+#define Y_DIR           (OUTPUT_PP_50MHZ   | PIN_PORT_E | PIN_NUM_03)//PIN_PORT_E | PIN_NUM_06
+#define Y_HOME          (INPUT_PULLUP    | PIN_PORT_E | PIN_NUM_00)//PIN_PORT_E | PIN_NUM_03
+#define Y_HomeFine		(INPUT_PULLUP    | PIN_PORT_E | PIN_NUM_01)
 #define Y_STEP          (OUTPUT_PP_50MHZ   | PIN_PORT_A | PIN_NUM_08)//PIN_PORT_A | PIN_NUM_08
 //Z_Motor
 #define Z_DIR           (OUTPUT_PP_50MHZ   | PIN_PORT_E | PIN_NUM_09)//PIN_PORT_D | PIN_NUM_14
-#define Z_HOME          (INPUT_FLOATING    | PIN_PORT_B | PIN_NUM_06)//PIN_PORT_E | PIN_NUM_00
-#define Z_LIMIT			(INPUT_FLOATING    | PIN_PORT_A | PIN_NUM_00)
+#define Z_HOME          (INPUT_PULLUP    | PIN_PORT_B | PIN_NUM_06)//PIN_PORT_E | PIN_NUM_00
+#define Z_HomeFine		(INPUT_PULLUP    | PIN_PORT_A | PIN_NUM_00)
 #define Z_STEP          (OUTPUT_PP_50MHZ   | PIN_PORT_A | PIN_NUM_06)//PIN_PORT_B | PIN_NUM_05
 //A_Motor
 #define A_DIR           (OUTPUT_PP_50MHZ   | PIN_PORT_E | PIN_NUM_11)//PIN_PORT_D | PIN_NUM_06
 #define A_HOME          (INPUT_PULLUP      | PIN_PORT_B | PIN_NUM_13)//PIN_PORT_B | PIN_NUM_03
-#define A_LIMIT			(INPUT_PULLUP      | PIN_PORT_E | PIN_NUM_13)
+#define A_HomeFine		(INPUT_PULLUP      | PIN_PORT_E | PIN_NUM_13)
 #define A_STEP          (OUTPUT_PP_50MHZ   | PIN_PORT_A | PIN_NUM_01)//PIN_PORT_D | PIN_NUM_04
 //B_motor
 #define B_DIR           (OUTPUT_PP_50MHZ   | PIN_PORT_D | PIN_NUM_08  | PIN_INIT_LOW)//PIN_PORT_B | PIN_NUM_00
 #define B_HOME          (INPUT_PULLUP      | PIN_PORT_D | PIN_NUM_10)//PIN_PORT_E | PIN_NUM_07
-#define B_LIMIT			(INPUT_PULLUP	   | PIN_PORT_B | PIN_NUM_12)
+#define B_HomeFine		(INPUT_PULLUP	   | PIN_PORT_B | PIN_NUM_12)
 #define B_STEP          (OUTPUT_PP_50MHZ   | PIN_PORT_A | PIN_NUM_07 | PIN_INIT_LOW)//PIN_PORT_D | PIN_NUM_15
 //C_Motor
 #define C_DIR           (OUTPUT_PP_50MHZ   | PIN_PORT_D | PIN_NUM_14)//PIN_PORT_A | PIN_NUM_10
 #define C_HOME          (INPUT_PULLUP      | PIN_PORT_D | PIN_NUM_11)//PIN_PORT_A | PIN_NUM_06
-#define C_LIMIT			(INPUT_PULLUP      | PIN_PORT_E | PIN_NUM_02)
+#define C_HomeFine		(INPUT_PULLUP      | PIN_PORT_E | PIN_NUM_02)
 #define C_STEP          (OUTPUT_PP_50MHZ   | PIN_PORT_D | PIN_NUM_15 | PIN_INIT_LOW)//PIN_PORT_A | PIN_NUM_02
 //standard pins
+
+//all pulse timers are slaved to TIM1
+//xstep PE5    TIM9_CH1(TIm15_Ch1  can be slaved to TIM1 on stm32h743)
+//ystep PA8    TIM1_CH1  
+//Zstep PA6    TIm3_CH1  TIM13_CH1
+//Astep PA1    TIM2_CH2  TIM5_CH2
+//Bstep PA7    TIM5_CH3  TIM2_CH3  TIM9_CH1
+//Cstep PD15   TIM4_CH4
+
+//assign the following pins for motor control
+//start of hardware timer output for step pulses
+//#define C_DIR           (OUTPUT_PP_50MHZ   | PIN_PORT_E | PIN_NUM_04)
+//#define C_HOME          (INPUT_FLOATING    | PIN_PORT_C | PIN_NUM_01)
+//#define C_LIMIT			(INPUT_FLOATING    | PIN_PORT_A | PIN_NUM_10)
+//#define C_STEP          (OUTPUT_PP_50MHZ   | PIN_PORT_E | PIN_NUM_05)//TIm15_Ch1 743 only
+////Y_Motor
+//#define B_DIR           (OUTPUT_PP_50MHZ   | PIN_PORT_E | PIN_NUM_06)
+//#define B_HOME          (INPUT_FLOATING    | PIN_PORT_E | PIN_NUM_00)
+//#define B_LIMIT			(INPUT_FLOATING    | PIN_PORT_E | PIN_NUM_01)
+//#define B_STEP          (OUTPUT_PP_50MHZ   | PIN_PORT_A | PIN_NUM_08)//TIM1_CH1 not slaved 
+////Z_Motor
+//#define A_DIR           (OUTPUT_PP_50MHZ   | PIN_PORT_E | PIN_NUM_09)
+//#define A_HOME          (INPUT_FLOATING    | PIN_PORT_B | PIN_NUM_06)
+//#define A_LIMIT			(INPUT_FLOATING    | PIN_PORT_A | PIN_NUM_00)
+//#define A_STEP          (OUTPUT_PP_50MHZ   | PIN_PORT_A | PIN_NUM_06| PIN_INIT_LOW)//TIM3_CH1-slaved to TIM1
+////A_Motor
+//#define Z_DIR           (OUTPUT_PP_50MHZ   | PIN_PORT_E | PIN_NUM_11)
+//#define Z_HOME          (INPUT_PULLUP      | PIN_PORT_B | PIN_NUM_13)
+//#define Z_LIMIT			(INPUT_PULLUP      | PIN_PORT_E | PIN_NUM_13)
+//#define Z_STEP          (OUTPUT_PP_50MHZ   | PIN_PORT_A | PIN_NUM_01 | PIN_INIT_LOW)//TIM2_CH2-slaved to TIM1
+////B_motor
+//#define Y_DIR           (OUTPUT_PP_50MHZ   | PIN_PORT_D | PIN_NUM_08 | PIN_INIT_LOW)
+//#define Y_HOME          (INPUT_PULLUP      | PIN_PORT_D | PIN_NUM_10)
+//#define Y_LIMIT			(INPUT_PULLUP	   | PIN_PORT_B | PIN_NUM_12)
+//#define Y_STEP          (OUTPUT_PP_50MHZ   | PIN_PORT_A | PIN_NUM_07 | PIN_INIT_LOW)//TIM5_CH3-slaved to TIM1
+////X_Motor
+//#define X_DIR           (OUTPUT_PP_50MHZ   | PIN_PORT_D | PIN_NUM_14)
+//#define X_HOME          (INPUT_PULLUP      | PIN_PORT_D | PIN_NUM_11)				
+//#define X_LIMIT			(INPUT_PULLUP      | PIN_PORT_E | PIN_NUM_02)
+//#define X_STEP          (OUTPUT_PP_50MHZ   | PIN_PORT_D | PIN_NUM_15 | PIN_INIT_LOW)//TIM4_CH4-slaved to TIM1
+//end of hardware timer outputs
+//
+//
 
 
 #define AIN7            (ANALOG_FLOATING   | PIN_PORT_F | PIN_NUM_09)
@@ -121,6 +164,9 @@
 
 #define CAN1_RX         (PIN_AF_CAN1       | PIN_PORT_D | PIN_NUM_00 | PIN_PUPPD_PULLUP)//PB0
 #define CAN1_TX         (PIN_AF_CAN1       | PIN_PORT_D | PIN_NUM_01)                   //PB1
+#define PIN_TX2_D05		(PIN_PORT_D			| PIN_NUM_05| PIN_AF_USART2) //TX2>>SC01 GPIO14
+#define PIN_RX2_D06		(PIN_PORT_D			| PIN_NUM_06| PIN_AF_USART2) //RX2>>SC01 GPIO12
+
 //#define CAN2_RX         (PIN_AF_CAN2       | PIN_PORT_B | PIN_NUM_12 | PIN_PUPPD_PULLUP)//PB12
 //#define CAN2_TX         (PIN_AF_CAN2       | PIN_PORT_B | PIN_NUM_13)                  //PB13
 #define DAC2_OUT        (ANALOG_FLOATING   | PIN_PORT_A | PIN_NUM_05)
@@ -129,7 +175,10 @@
 //#define DRAIN3          (OUTPUT_PP_50MHZ   | PIN_PORT_D | PIN_NUM_11)
 //#define DRAIN4          (OUTPUT_PP_50MHZ   | PIN_PORT_D | PIN_NUM_11)
 #define CAN_TX_LED      (OUTPUT_PP_50MHZ   | PIN_PORT_F | PIN_NUM_06)
-#define HEARTBEAT       (OUTPUT_PP_2MHZ    | PIN_PORT_C | PIN_NUM_13)
+//#define HEARTBEAT       (OUTPUT_PP_2MHZ    | PIN_PORT_C | PIN_NUM_13)
+#define HEARTBEAT       (PIN_PORT_C | PIN_NUM_13 | PIN_INIT_LOW | OUTPUT_PP_50MHZ)
+#define HEARTBEAT_SET       GPIOC->BSRR = PIN_MASK_13                 //index to the set bit register
+#define HEARTBEAT_CLR       GPIOC->BSRR = (uint32_t)PIN_MASK_13 << 16 //index to the Clear bit register
 #define HSS_AUX_PWR1    (OUTPUT_PP_50MHZ   | PIN_PORT_D | PIN_NUM_05)  //M601 J59 pin 1 AUX1
 #define HSS_AUX_PWR2    (OUTPUT_PP_50MHZ   | PIN_PORT_D | PIN_NUM_07)  //M602 J59 pin 2 AUX2
 //#define HSS_AUX_PWR4    (OUTPUT_PP_50MHZ   | PIN_PORT_B | PIN_NUM_04)  //M603 J59 pin 3 AUX4

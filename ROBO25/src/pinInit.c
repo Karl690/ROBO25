@@ -24,26 +24,36 @@ void pinInitAll(void)
 
 	pinInit(X_DIR);
 	pinInit(X_HOME);
+	pinInit(X_HomeFine);
 	pinInit(X_STEP);
+	//
 	pinInit(Y_DIR);
 	pinInit(Y_HOME);
+	pinInit(Y_HomeFine);
 	pinInit(Y_STEP);
+	//
 	pinInit(Z_DIR);
 	pinInit(Z_HOME);
+	pinInit(Z_HomeFine);
 	pinInit(Z_STEP);
+	//
 	pinInit(A_DIR);
 	pinInit(A_HOME);
+	pinInit(A_HomeFine);
 	pinInit(A_STEP);
-	pinInit(AIN7);
-	pinInit(AIN8);
+	//
 	pinInit(B_DIR);
 	pinInit(B_HOME);
+	pinInit(B_HomeFine);
 	pinInit(B_STEP);
-	pinInit(BOOT1);   // undefined
+	//
 	pinInit(C_DIR);
 	pinInit(C_HOME);
-	pinInit(C_LIMIT);
+	pinInit(C_HomeFine);
 	pinInit(C_STEP);
+	pinInit(AIN7);
+	pinInit(AIN8);
+	pinInit(BOOT1); // undefined
 	pinInit(CAN1_RX);
 	pinInit(CAN1_TX);
 //	pinInit(CAN2_RX);
